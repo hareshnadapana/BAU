@@ -1,0 +1,17 @@
+::ng-deep{
+    .p-panel .p-panel-footer{
+    text-align: center !important;
+    }
+}
+
+.msg-box{
+    // border-radius: 5px;
+    width: 55% !important;
+    // margin-right: 15%;
+}
+
+@media screen and (max-width: 768px) {
+    .msg-box{
+        width: 90% !important;
+    }
+}

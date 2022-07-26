@@ -1,0 +1,25 @@
+<div class="absolute inset-0 flex flex-col min-w-0 justify-center items-center overflow-hidden" id="submitOrderPage"
+    *ngIf="!(isLoading$ | async)">
+
+
+    <div *ngIf="error$ | async" class="error-box" id="submitOrderError">
+        <app-message-display [status]="statuserr"></app-message-display>
+    </div>
+    <div *ngIf="(error$ | async) == null" class=" p-10 rounded-xl msg-box bg-card mat-elevation-z2 "
+        id="submit_order_column">
+
+        <div class="flex flex-col" id="submit_order_content">
+           
+            <div *ngIf="isSuccess" class="flex justify-center">
+                <p class="text-3xl font-bold mb-4" id="orderSuccessMsg">Unreserve Number Submitted Successfully
+                </p>
+            </div>
+
+            <div *ngIf="!isSuccess" class="flex justify-center">
+                <p class="text-3xl font-bold mb-4" id="orderSuccessMsg">Unreserve Number Are Not Successful
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

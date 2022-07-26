@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    }
+
+    .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    input[type=checkbox] {
+      vertical-align: middle;
+      position: relative;
+      bottom: 1px;
+    }
+    </style>
+ </head>
+ <body>
+    <!-- Header -->
+    <div
+    class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between ml-8 mr-8 bg-default dark:bg-transparent">
+    <div class="flex-1 flex justify-between" style="align-items:center; padding: 10px 0px 10px 0px">
+        <div class="flex flex-col justify-start items-start">
+          <div>
+            <button mat-button (click)="previousPage()" color="primary" id="back" class="-ml-5">
+              <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+              <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+            </button>
+          </div>
+          <div class="flex-1 flex" style="align-items: center; display:flex;">
+            <div class="text-3xl md:text-4xl font-extrabold">
+                CUG (Closed User Group)
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="back-container" cdkScrollable>
+    <div style="width:100%; display:flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items:center; padding: 0px 0px 20px 9px;">
+        <div>
+          <span style="font-size: 16px; font-weight: 500; margin-right: 20px;">
+            MSISDN Numbers
+          </span>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <div style="width: 25px;height: 25px;margin-left: 1px;">
+            <label class="container">
+              <input class="ml-4" style="height:25px;width:25px; opacity:0" type="checkbox" id="select-all" (change)="onAll([docsResponseDuplicate], true, [docsResponseDuplicate])" [checked]="isAll"> 
+              <span class="checkmark"></span>
+            </label>  
+          </div>
+          <span style="padding-left:12px">
+            Select All
+          </span>
+        </div>
+      </div>
+    </div>
+
+  <div class="numberList">
+    <div class="card" *ngIf="docsResponseDuplicate.length > 0">
+      <div class="rounded-2xl" >
+        <div *ngFor="let opt of docsResponseDuplicate | slice:0:5;" style="margin-top: 9%; margin-bottom: 9%; margin-left: 8%;">
+          <div class="mb-4" style="display:flex; align-items: center;">
+              <div style="width: 25px;height: 25px;margin-left: 1px;">
+                <label class="container">
+                  <input class="ml-4 mr-2" style="width:25px; height:25px; opacity: 0;" type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" (change)="onChange(opt, true, opt.value)" [checked]="opt.isSelect" />                   
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            <span style="padding-left:18px">
+              {{opt.value}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="docsResponseDuplicate.length > 5">
+      <div class="rounded-2xl">
+        <div *ngFor="let opt of docsResponseDuplicate | slice:5:10;" style="margin-top: 9%; margin-bottom: 9%; margin-left: 8%;">
+          <div class="mb-4" style="display:flex; align-items: center;">
+            <div style="width: 25px;height: 25px;margin-left: 1px;">
+              <label class="container">
+                <input class="ml-4 mr-2" style="width:25px; height:25px; opacity: 0;" type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" (change)="onChange(opt, true, opt.value)" [checked]="opt.isSelect" />                   
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <span style="padding-left:18px">
+              {{opt.value}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="docsResponseDuplicate.length > 10">
+      <div class="rounded-2xl">
+        <div *ngFor="let opt of docsResponseDuplicate | slice:10:15;" style="margin-top: 9%; margin-bottom: 9%; margin-left: 8%;">
+          <div class="mb-4" style="display:flex; align-items: center;">
+            <div style="width: 25px;height: 25px;margin-left: 1px;">
+              <label class="container">
+                <input class="ml-4 mr-2" style="width:25px; height:25px; opacity: 0;" type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" (change)="onChange(opt, true, opt.value)" [checked]="opt.isSelect" />                   
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <span style="padding-left:18px">
+              {{opt.value}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="docsResponseDuplicate.length > 15">
+      <div class="rounded-2xl">
+        <div *ngFor="let opt of docsResponseDuplicate | slice:15:20;" style="margin-top: 9%; margin-bottom: 9%; margin-left: 8%;">
+          <div class="mb-4" style="display:flex; align-items: center;">
+            <div style="width: 25px;height: 25px;margin-left: 1px;">
+              <label class="container">
+                <input class="ml-4 mr-2" style="width:25px; height:25px; opacity: 0;" type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" (change)="onChange(opt, true, opt.value)" [checked]="opt.isSelect" />                   
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <span style="padding-left:18px">
+              {{opt.value}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="docsResponseDuplicate.length > 20">
+      <div class="rounded-2xl">
+        <div *ngFor="let opt of docsResponseDuplicate | slice:20:25;" style="margin-top: 9%; margin-bottom: 9%; margin-left: 8%;">
+          <div class="mb-4" style="display:flex; align-items: center;">
+            <div style="width: 25px;height: 25px;">
+              <label class="container">
+                <input class="ml-4 mr-2" style="width:25px; height:25px; opacity: 0;" type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" (change)="onChange(opt, true, opt.value)" [checked]="opt.isSelect" />                   
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <span style="padding-left:18px">
+              {{opt.value}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-paginator #paginator [length]="docsResponseDuplicate.length" [pageIndex]="0" class="flex items-center justify-end"
+      [pageSize]="12" [showFirstLastButtons]="true" [pageSizeOptions]="[12, 24, 36, 100]" (page)="pageChangeEvent($event)">
+  </mat-paginator>
+</div>
+
+<div class="row w-100 mt-8 mr-8 ml-8 mb-8" style="max-width: fit-content; align-self: flex-end; font-size: 16px;">
+  <!-- <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="cancel()">
+    Cancel
+  </button> -->
+
+  <!-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full ml-4" (click)="openDialog()" >
+    Continue
+  </button> -->
+
+<button mat-flat-button color='celcom-blue' class="button-styling" (click)="next($event)" [disabled]="proceedEnable">
+  Continue
+</button>
+</div>
+
+ </body>
+</html>

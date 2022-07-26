@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+const debug = require('debug')('server-express');
+const fs = require('fs');
+const https = require('https');
+const app = require('../app');
+
+// const privateKey  = fs.readFileSync('/app/environment/keystore/server.key','utf8');
+
+// const certificate = fs.readFileSync('/app/environment/keystore/server.crt','utf8');
+
+const privateKey  = fs.readFileSync('/app/environment/keystore/server.key','utf8'); 
+const certificate = fs.readFileSync('/app/environment/keystore/server.crt','utf8'); 
+
+const credentials = {key: privateKey, cert: certificate};
+
+const HOST = app.get('envHost');
+const PORT = process.env.PORT || app.get('envPort');
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(PORT, HOST, () =>
+console.log(app.get('contextPath') + 'Express https running in ', HOST + ':' + PORT));

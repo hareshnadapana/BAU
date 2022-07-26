@@ -1,0 +1,15 @@
+
+
+{
+    "angular.orderapp.privateKey": "/app/environment/keystore/tcshobs/celcom.key",
+    "angular.orderapp.certificate": "/app/environment/keystore/tcshobs/celcom.crt",
+    "angular.frontoffice.apiPrefix": "dev.hobs.celcom.com.my",
+    "angular.frontoffice.port": "20103",
+    "angular.frontoffice.host": "apache.tcshobs.com",
+    "angular.env": "prod",
+    "angular.env.developmentMode": false,
+    "angular.env.loglevel": "OFF",
+    "angular.frontoffice.casPrefix": "apache.tcshobs.com",
+    "angular.frontoffice.userCallPrefix": "apache.tcshobs.com:20103",
+    "angular.frontoffice.logPrefix": "localhost:8000"
+}

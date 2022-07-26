@@ -1,0 +1,102 @@
+<div class="relative" style="display: flex; justify-content: space-between;">
+<span class="side-heading pl-1.5">
+    Attachment
+</span>
+<mat-icon matPrefix class="close-icon" svgIcon="heroicons_outline:x" (click)="back()"></mat-icon>
+</div>
+<div class="relative min-h-220 max-h-400 h-24 min-h-full table-section" >
+    
+    <div class="flex-auto pt-5 sm:pt-5 rounded-2xl  bg-card">
+             
+    
+        <div class="h-full  min-h-full max-h-full ">
+
+            <div class="dropdown-custom">
+                <mat-form-field id="{{property[0].label}}" class="w-full {{property[0].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[0].label}}</mat-label>
+                    <mat-select [id]="property[0].key" [formControl]="requiredCheck0"
+                         (selectionChange)="valueChangeEvent($event.value,'')"
+                        [required]="property[0].validators.required">
+                        <ng-container *ngIf="property[0].lookupExternal">
+                            <!-- <mat-option *ngFor="let op of externalValues.get(property[0].key)" id="{{op.label}}"
+                                [value]="op.value">
+                                {{op.label}}
+                            </mat-option> -->
+                        </ng-container>
+                        <ng-container *ngIf="!property[0].lookupExternal">
+                            <mat-option *ngFor="let op of property[0].enum" [value]="op.value"
+                                [disabled]="op.disabled===true" id="{{op.label}}">
+                                <mat-icon *ngIf="op.disabled===true">check</mat-icon>
+                                {{op.label}}
+                            </mat-option>
+                        </ng-container>
+                    </mat-select>
+                </mat-form-field>
+                <ng-container *ngIf="property[0].isExternalValidation">
+                    <!-- <div id="statusError_{{property[0].label}}"
+                        [ngClass]="{'status-error': externalValidation.get(property[0].key).status === 'error', 'status-info':externalValidation.get(property[0].key).status !== 'error' }">
+                        {{ externalValidation.get(property[0].key).message }}
+                    </div> -->
+                </ng-container>
+            </div>
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[1].label}}" class="w-full {{property[1].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[1].label}}</mat-label>
+                    <div *ngIf="property[1].prefix" matPrefix>{{property[1].prefix}}</div>
+                    <input [disabled]="property[1].disabled" matInput [type]="property[1].type" [id]="property[1].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" 
+                        [pattern]="property[1].validators.pattern" [formControl]="requiredCheck1"
+                        [required]="property[1].validators.required"
+                        casetransform [(ngModel)]="attachmentDetails">
+                        <!-- (change)="valueChangeEvent($event.value,'')"  -->
+                </mat-form-field>
+            </div>
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[3].label}}" class="w-full {{property[3].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[3].label}}</mat-label>
+                    <div *ngIf="property[3].prefix" matPrefix>{{property[3].prefix}}</div>
+                    <input [disabled]="property[3].disabled" matInput [type]="property[3].type" [id]="property[3].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" 
+                        [pattern]="property[3].validators.pattern" 
+                        [required]="property[3].validators.required"
+                        casetransform [value]="property[3].value">
+                        <!-- (change)="valueChangeEvent($event.value,'')"  -->
+                    <button mat-flat-button (click)="openFile()" id="upload-document-button" aria-label="Upload Document" color="celcom-dark-blue">
+                        <img src="assets/images/logo/attach_icon_white.svg" width="100%" height="75%" style= "margin-right: 15px;">
+                        Choose File
+                    </button>
+                </mat-form-field>
+                <input type="file" id="fileUpload"  (change)="handleFileInput($event.target.files)"  class="invisible w-0"
+                >
+            
+            </div>
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[2].label}}" class="w-full {{property[2].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[2].label}}</mat-label>
+                    <div *ngIf="property[2].prefix" matPrefix>{{property[2].prefix}}</div>
+                    <input [disabled]="property[2].disabled" matInput [type]="property[2].type" [id]="property[2].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" 
+                        [pattern]="property[2].validators.pattern" [formControl]="requiredCheck2"
+                        [required]="property[2].validators.required"
+                        casetransform>
+                        <!-- (change)="valueChangeEvent($event.value,'')"  -->
+                </mat-form-field>
+      
+            </div>
+            <div class=" ml-8" style="display:flex; justify-content:end; font-size: 16px; background-color: white !important">
+                <!-- <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="back()">
+                  Cancel
+                </button> -->
+          
+          <button mat-flat-button color='celcom-blue' class="button-styling" (click)="closeDialog()" [disabled]="requiredCheck0.invalid || !requiredCheck0.value || requiredCheck1.invalid || !requiredCheck1.value || requiredCheck2.invalid || !requiredCheck2.value">
+                Attach
+              </button>
+            </div>
+
+        </div>
+    </div>
+</div>

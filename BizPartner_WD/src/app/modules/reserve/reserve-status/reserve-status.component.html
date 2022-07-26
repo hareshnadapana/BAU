@@ -1,0 +1,46 @@
+<div class="absolute inset-0 flex flex-col min-w-0 justify-center items-center overflow-hidden" id="submitOrderPage"
+    *ngIf="!(isLoading$ | async)">
+
+
+    <div *ngIf="error$ | async" class="error-box" id="submitOrderError">
+        <app-message-display [status]="statuserr"></app-message-display>
+    </div>
+    <div *ngIf="(error$ | async) == null" class=" p-10 rounded-xl msg-box bg-card mat-elevation-z2 "
+        id="submit_order_column">
+
+        <div class="flex flex-col" id="submit_order_content">
+            <!-- <div class="flex justify-center">
+                <p class="text-3xl font-bold mb-4" id="orderSuccessMsg">
+                    {{statusDisplay}}
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <p id="orderNumber" class="mat-title">Date : {{currentDate | date:'dd-MM-yyyy'}}
+                </p>
+            </div> -->
+            <div *ngIf="isSuccess" class="flex justify-center">
+                <p class="text-3xl font-bold mb-4" id="orderSuccessMsg">Reservation Numbers Submitted Successfully
+                </p>
+            </div>
+            <div *ngIf="!isSuccess" class="flex justify-center">
+                <p class="text-3xl font-bold mb-4" id="orderSuccessMsg">Reservation Numbers Are Not Successful
+                </p>
+            </div>
+            <!-- <div class="flex justify-center">
+                <p id="orderNumber" class="mat-title">The Reservation Number for tracking is<button mat-button
+                        [color]="'primary'" type="button" id="cartInstanceIdentifier" class="text-xl font-bold"
+                        (click)="redirectTo()">{{currentDate | date:'dd-MM-yyyy'}}</button>
+                </p>
+            </div> -->
+
+            <!-- <div class="flex justify-center mb-4" >
+                <p id="expectedOrderCompletionDate" class="mat-title">Expected Reservation Number completion date is <span
+                        id="expectedCompletionDate_Appt"
+                        class="font-bold">{{currentDate | date:'dd-MM-yyyy'}}</span>
+                </p>
+            </div> -->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-hidden" id="landing_body" *ngIf="!searchResultFlag">
+  <div class="p-12 mt-12 w-full" id="landing_body_content">
+    <div class="absolute inset-0 flex flex-col min-w-0 overflow-hidden">
+      <div class="relative overflow-y-auto table-section">
+        <!-- Header -->
+        <!-- <div>
+          <button mat-button (click)="previousPage()" color="primary" id="back" class="ml-2 mt-2">
+            <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+            <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+          </button>
+        </div> -->
+        <div class="title-container">
+          <div class="text-3xl md:text-4xl font-extrabold">
+            <button mat-icon-button (click)="previousPage()" color="primary" id="back">
+              <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+            </button>
+            List Of Created Srs
+          </div>
+          <div class="textbox-custom input-box">
+            <input matInput type="text" class="form-control input-content" placeholder="Search" casetransform style="padding-left: 10%;">
+            <button (click)="searchNumber()" style="margin-right: 10px; margin-left: 5px;">
+              <img src="assets/images/logo/search_icon.svg" style="max-height: 20px; width: unset;" >
+            </button>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="table-styling">
+          <table mat-table [dataSource]="dataSource" class="docs-table products-table" matSort fusePerfectScrollbar>
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> Reference Number </th>
+              <td mat-cell *matCellDef="let element"> {{element.reference_number}} </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Status </th>
+              <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Date Created </th>
+              <td mat-cell *matCellDef="let element"> {{element.date_created}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> SR Area </th>
+              <td mat-cell *matCellDef="let element"> {{element.sr_area}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <mat-paginator
+          class="paginator pr-4"
+          [pageIndex]="0"
+          [pageSize]="12"
+          [showFirstLastButtons]="true"
+          [pageSizeOptions]="[12, 24, 36, 100]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        ></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-hidden" id="landing_body" *ngIf="searchResultFlag">
+  <div class="p-12 mt-12 w-full" id="landing_body_content">
+    <div class="absolute inset-0 flex flex-col min-w-0 overflow-hidden">
+      <div class="relative overflow-y-auto table-section" cdkScrollable>
+      <!-- Header -->
+        <div class="my-5" style="margin-right:16px; margin-left: 16px;">
+          <div class="flex-1 flex justify-between mt-2">
+            <div class="flex flex-col justify-start items-start">
+              <div class="side-heading">
+                <button  mat-icon-button (click)="previousPage()" id="back" color="primary">
+                  <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+                </button>
+                <div>Query SR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="ml-8 mr-8 mb-8 flex-auto p-6 sm:py-6 sm:px-5 rounded-2xl shadow  bg-card" cdkScrollable>
+          <h2 class="side-heading-details">
+            QR Details
+          </h2>
+          <div class="h-full  min-h-full max-h-full ">
+            <div class="card-styling">
+              <div class="card-details-styling">
+                <div>
+                  <span>SR Number</span>
+                  <label class="block">1-53193845</label>
+                </div>
+              </div>
+              <div class="card-details-styling">
+              <div>
+                <span>SR Type</span>
+                <label class="block">Customer Request</label>
+              </div>
+              </div>
+              <div class="card-details-styling">
+                <div>
+                  <span>Category</span>
+                  <label class="block">Corporate Official</label>
+                </div>
+              </div>
+            </div>
+            <div class="card-styling">
+              <div class="card-details-styling">
+                <div>
+                  <span>Description</span>
+                  <label class="block">User Manual</label>
+                </div>
+              </div>
+              <div class="card-details-styling">
+                <div>
+                  <span>Source</span>
+                  <label class="block">eCRM</label>
+                </div>
+              </div>
+              <div class="card-details-styling">
+                <div>
+                  <span>SR Type</span>
+                  <label class="block">Cusotmer Request</label>
+                </div>
+              </div>
+            </div>
+            <div class="card-styling">
+              <div class="card-details-styling">
+                <div>
+                  <span>Category</span>
+                  <label class="block">Corporate Official</label>
+                </div>
+              </div>
+              <div class="card-details-styling">
+                <div>
+                  <span>Description</span>
+                  <label class="block">User Manual</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

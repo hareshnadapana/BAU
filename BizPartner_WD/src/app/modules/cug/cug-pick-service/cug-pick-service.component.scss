@@ -1,0 +1,367 @@
+.profile-white {
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.6em;
+  border-radius: 3px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  background-color: #ffffff !important;
+  color: #424242;
+}
+::ng-deep {
+  //option that are displayed-view,edit,remove,assign
+  .p-menu-overlay {
+    position: fixed !important;
+    display: grid !important;
+    left: 882.55px !important;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 1em;
+    // margin-right: 1em;
+    margin-top: 10em;
+    border-radius: 3px;
+  }
+
+  .p-menu.p-menu-overlay.profile-white {
+    top: 0px;
+    left: 0px;
+  }
+  // .p-menu .p-submenu-header {
+  //   padding: 0;
+  //   line-height:350px;
+  //   height:35px;
+  // }
+  .p-button-icon {
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+::ng-deep {
+  .p-dialog .p-dialog-header .p-dialog-title {
+    margin-left: 15px !important;
+  }
+  .p-dialog .p-dialog-header {
+    padding: 4px !important;
+  }
+  // .p-dialog{
+  //   width: 100% !important;
+  // }
+}
+
+.fullpg-container {
+  min-height: 100px;
+}
+
+//icon boundary properties e.g when click 3 dot then shadow comes that will be decided by width/height
+.p-button-text {
+  min-width: 10px;
+  font-size: 35px; 
+  background-size: 10px;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+}
+
+.products-table {
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .mat-header-row {
+    min-height: 64px;
+  }
+
+  .product {
+    position: relative;
+    cursor: pointer;
+    height: 70px;
+  }
+
+  .mat-cell {
+    min-width: 0;
+    align-items: center;
+  }
+
+  .mat-column-name {
+    flex: 0 1 400px;
+  }
+
+  .mat-column-contacttype {
+    flex: 0 1 150px;
+
+    .product-image {
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .mat-column-mobile {
+    flex: 0 1 300px;
+  }
+
+  .mat-column-email {
+    flex: 0 1 400px;
+  }
+
+  .mat-column-quantity {
+    flex: 0 1 160px;
+  }
+
+  .mat-column-action {
+    flex: 0 1 80px;
+  }
+
+  .quantity-indicator {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+
+    & + span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .active-icon {
+    border-radius: 50%;
+  }
+}
+
+fuse-sidebar {
+  background: none !important;
+  box-shadow: none !important;
+}
+#cust_mat_icon{
+  font-size: 30px;float: left;
+}
+#uploadDocument{
+  float: right;margin-bottom: 10px;margin-top: 20px;
+}
+#uploadedBy_date{
+  font-size: 12px; font-weight: 300
+}
+#deleteAction_2{
+  font-size: 12px; font-weight: 300;cursor: pointer;
+}
+.mat-header-cell {
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.status-pending{
+  background-color:  #F2A22B !important;
+  color: #ffffff;  
+}
+.status-success{
+  background-color: #47CC78 !important;
+  color: #ffffff;  
+}
+.mat-column-outletid{
+  // width:100px ;
+  width: 23%;
+}
+.mat-column-outletid,.mat-column-msisdn,.mat-column-tick,.mat-column-reservedate{
+  padding-right: 20px;
+}
+.mat-column-msisdn{
+  // width: 180px;
+  width: 23%;
+}
+.mat-column-tick{
+  // width: 250px;
+  // width: 23%;
+}
+.mat-column-reservedate{
+  // width: 200px;
+  width: 23%;
+}
+.mat-column-releasedate{
+  width: 23%;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  padding: 14px 40px !important;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-celcom-white-alternate {
+  background-color: white;
+  padding: 14px 40px !important;
+  color: #009BDF;
+  border: 1px solid #009BDF;
+
+  &:hover {
+    background-color: rgba(0, 155, 223, 1);
+    color: white;
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  // padding-left: 35px;
+  // padding-right: 35px;
+  // margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 2;
+  width: 2;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 23px;
+  width: 23px;
+  border: 0.11rem solid #1FA8E3; 
+  border-radius: 4px;
+  // background-color: #eee;
+}
+
+//   .checkmarkDifferentComp {
+//     position: absolute;
+//     top: -1px;
+//     left: 0px;
+//     height: 22px;
+//     width: 22px;
+//     // background-color: #eee;
+//   }
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #1FA8E3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button-styling {
+  margin-left: 1rem;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.back-container{
+  padding:30px 30px 0px 30px;
+  margin-left: 2rem; //ml-8
+  margin-right: 2rem; //mr-8
+  flex: 0 0 auto; //flex-none 
+  border-radius: 1rem; //rounded-2xl
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); //shadow
+  overflow-y: auto; //overflow-y-auto 
+  background-color: #ffffff;
+}
+
+.numberList {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rounded-2xl {
+  border: 2px solid lightgrey;
+  border-radius: 1rem;
+}
+
+.card{
+  flex:auto;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.number{
+  padding-left: 18px;
+}
+
+.paginator{ //belum
+  justify-content: flex-end; // justify-end
+  align-items: center; //items-center
+  display: flex; //flex
+}
+
+body {
+  font-size: 100%;
+}
+
+
+//Mobile devices and Tablets
+@media only screen and (max-width: 768px) {
+  .numberList {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .card{
+    margin-bottom: 10px;
+  }
+
+  .checkmark{
+    height: 30px;
+    width: 30px;
+  }
+
+  .number{
+    font-size: 20px;
+    padding-left: 30px;
+  }
+
+}

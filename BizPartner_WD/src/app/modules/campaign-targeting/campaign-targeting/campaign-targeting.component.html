@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    }
+    input[type=checkbox] {
+      vertical-align: middle;
+      position: relative;
+      bottom: 1px;
+    }
+    </style>
+ </head>
+ <body>
+  <form class="" [formGroup]="CampaignTargetingSearchForm">
+    <!-- Header -->
+    <!-- <div>
+      <button mat-button type="button" (click)="back()" color="primary" id="back" class="ml-4 mt-3">
+        <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+        <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+      </button>
+    </div> -->
+    <div
+    class="flex-col sm:flex-row flex-0 sm:items-center sm:justify-between bg-default dark:bg-transparent">
+    <div class="flex-1 justify-between heads" >
+        <div class="flex-col justify-start items-start headcol" >
+          <div class="flex-1" style="align-items: center; display:flex;">
+            <div class="text-3xl md:text-4xl font-extrabold">
+              <button mat-icon-button type="button" (click)="back()" color="primary" id="back">
+                <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+              </button>
+              Customer Target List
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-end">
+          <div class="items-center justify-end w-full" class="title">
+            <div *ngIf="checkboxFormArray.length > 0" >
+              <button class="clickcancel" mat-flat-button color="cancel" type="button" (click)="onCancel()">
+                Cancel
+              </button>
+  
+              <button class="clickdelete" mat-flat-button color="delete" type="button" (click)="onDelete()">
+                Delete
+              </button>
+            </div>
+
+            <div class="textbox-custom" class="searchbox" >
+              <input [disabled]="property[0].disabled" matInput [type]="property[0].type" [id]="property[0].key" class="form-control input-content"
+                [placeholder]="property[0].label" formControlName="search" [pattern]="property[0].validators.pattern"
+                [required]="property[0].validators.required" casetransform style="padding-left:10%;" />
+                <button type="submit" (click)="onSearch()" style="margin-right: 10px; margin-left: 5px;" >
+                  <img src="assets/images/logo/search_icon.svg" style="max-height: 20px; width: unset;" >
+                </button>
+            </div>
+            <div class="boxes" *ngIf="isAdmin">
+              <!-- <button class="titleicon" mat-flat-button color="celcom-blue" (click)="next()">
+                <img src="assets/images/logo/plus_icon.svg" width="100%" height="75%" alt="img" style="padding-right: 15%;"> -->
+              <button class="titleicon" mat-flat-button color="celcom-blue" (click)="nextupload()">
+                Upload File
+              </button>
+              <input accept=".xls, .xlsx" type="file" id="fileUpload" class="invisible w-0"
+                (change)="handleFileInput($event.target.files)" (click)="$event.target.value=null"
+                >
+            </div>
+            <div class="boxestwo">
+              <button class="filterbox"  (click)="onFilter()">
+                <img src="assets/images/logo/filter_icon.svg" width="100%" height="75%" alt="img">
+              </button>
+            </div>
+          </div>
+          <div *ngIf="showNotification" @fade class="rounded-2xl bg-card py-3 px-4 notification-popup" [style]="errorStatus ? 'background-color: #F44236 !important; display: inline-flex; width: 100%; justify-content: space-between; flex-direction: row' : 'background-color: #21C479 !important;display: inline-flex; width: 100%; justify-content: space-between; flex-direction: row'">
+            <div style="font-weight: 600; cursor: context-menu;">{{ notificationData }}</div>
+            <mat-icon matPrefix class="icon-close" svgIcon="heroicons_outline:x" (click)="onCloseNotification()"></mat-icon>
+          </div>
+        </div>
+    </div>
+  </div>
+  </form>
+
+  <form class="" [formGroup]="CampaignTargetingForm">
+  <div *ngIf="isBubble" style="display: flex; justify-content: flex-end;" >
+  <div *ngIf="isBubble" class="bubble" style="margin-right: 16px;">
+    <div class="flex-none rounded-2xl shadow overflow-y-auto bg-card" cdkScrollable>
+
+            <div class="row" class="filterfield" >
+              <div class="column mr-2">
+  
+                <div class="textbox-custom">
+                  <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                    <mat-label class="required-marker">{{bubbleProperty[0].label}}</mat-label>
+                    <input [disabled]="bubbleProperty[0].disabled" matInput [type]="bubbleProperty[0].type" [id]="bubbleProperty[0].key" class="form-control input-content"
+                      [placeholder]="bubbleProperty[0].title" formControlName="campaignName"
+                      required casetransform />
+                    <!-- <mat-error *ngIf="CampaignTargetingForm.get('campaignName').hasError('required') ">{{ getDropdownErrorMessage("campaignName") }}</mat-error> -->
+                  </mat-form-field>
+                </div>
+  
+                <div class="textbox-custom">
+                  <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                    <mat-label class="required-marker">{{bubbleProperty[2].label}}</mat-label>
+                    <input [disabled]="bubbleProperty[2].disabled" matInput [type]="bubbleProperty[2].type" [id]="bubbleProperty[2].key" class="form-control input-content"
+                      [placeholder]="bubbleProperty[2].title" formControlName="customerState"
+                      required  casetransform />
+                    <!-- <mat-error *ngIf="CampaignTargetingForm.get('customerState').hasError('required') ">{{ getDropdownErrorMessage("customerState") }}</mat-error> -->
+                  </mat-form-field>
+                </div>
+  
+                <div class="textbox-custom">
+                  <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                    <mat-label class="required-marker">{{bubbleProperty[4].label}}</mat-label>
+                    <input [disabled]="bubbleProperty[4].disabled" matInput [type]="bubbleProperty[4].type" [id]="bubbleProperty[4].key" class="form-control input-content"
+                      [placeholder]="bubbleProperty[4].title" formControlName="expiryDate"
+                      required casetransform/>
+                    <!-- <mat-error *ngIf="CampaignTargetingForm.get('expiryDate').hasError('required') ">{{ getDropdownErrorMessage("expiryDate") }}</mat-error> -->
+                  </mat-form-field>
+                </div>
+  
+              </div>
+  
+              <div class="columntwo ml-2">
+  
+                <div class="textbox-custom">
+                  <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                    <mat-label class="required-marker">{{bubbleProperty[1].label}}</mat-label>
+                    <input [disabled]="bubbleProperty[1].disabled" matInput [type]="bubbleProperty[1].type" [id]="bubbleProperty[1].key" class="form-control input-content"
+                      [placeholder]="bubbleProperty[1].title" formControlName="accountName"
+                      required casetransform />
+                    <!-- <mat-error *ngIf="CampaignTargetingForm.get('accountName').hasError('required') ">{{ getDropdownErrorMessage("accountName") }}</mat-error> -->
+                  </mat-form-field>
+                </div>
+  
+                <div class="textbox-custom">
+                  <mat-form-field  floatLabel="always" class="w-100 bg-card resize" hideRequiredMarker>
+                    <mat-label class="required-marker">{{bubbleProperty[3].label}}</mat-label>
+                    <input matInput [type]="bubbleProperty[3].type" [id]="bubbleProperty[3].key" class="form-control input-content"
+                      [placeholder]="bubbleProperty[3].title" formControlName="outletId"
+                      casetransform />
+                    <!-- <mat-error *ngIf="CampaignTargetingForm.get('outletId').hasError('required') ">{{ getDropdownErrorMessage("outletId") }}</mat-error> -->
+                  </mat-form-field>
+                </div>
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-end w-full" style="align-items: center; display:flex; margin-bottom: 30px;">
+          <button style="width: 9vw; margin-left: 24px; white-space:pre" mat-flat-button color="cancel" (click)="onCancelFilter()">
+            Clear
+          </button>
+  
+          <button style="width: 9vw; margin-left: 24px; margin-right: 24px; white-space:pre" mat-flat-button color="celcom-blue" (click)="onApplyFilter(null)">
+            Apply
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="flex-none overflow-y-auto mobileblock" style="margin-right: 16px; margin-left: 16px;" cdkScrollable>
+
+
+    <div class="h-full  min-h-full max-h-full ">
+         <div class="profile-box info-box work flex flex-col"  id="customer_contact" style="display: block !important;border:1px solid lightgrey; border-radius:8px; overflow: hidden">
+          <div *ngIf="dataSource!=null" >
+            <table mat-table [dataSource]="dataSource" style="width: 100%;justify-content: space-between;" class="docs-table"
+                matSort fusePerfectScrollbar class="products-table ">
+
+                <ng-container matColumnDef="tick" >
+                  <th mat-header-cell *matHeaderCellDef [hidden]="!isAdmin" style="background-color: darkblue; color: white"> 
+                    <div style="width: 100%;height: 100%;">
+                      <label class="container">
+                        <input style="height:100%;width:100%;opacity:100" type="checkbox" id="select-all" (change)="onAll(dataSource.filteredData, $event.target.checked, dataSource.filteredData)" [checked]="isAll" [disabled]="!isAdmin" > 
+                        <span class="checkmarkHead"></span>
+                      </label>  
+                    </div>
+                  </th>
+                  <td mat-cell *matCellDef="let dataSource" [hidden]="!isAdmin" >
+                    <div style="width: 100%;height: 100%;">
+                      <label class="container">
+                        <input style="height:100%;width:100%;opacity:100" type="checkbox" [id]="dataSource.billingaccountnumber" [value]="dataSource" (change)="onChange(dataSource, $event.target.checked, dataSource)" [checked]="dataSource.isSelect" [disabled]="!isAdmin" >
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="campaignname">
+                  <th mat-header-cell *matHeaderCellDef class="{{!isAdmin ? 'testcolumnalign' : 'columnalign'}}" style="background-color: darkblue; color: white"> Campaign Name
+                  </th>
+                  <td mat-cell *matCellDef="let element" class="{{!isAdmin ? 'testcolumnalign' : 'columnalign'}}">
+                    {{element.campaignname}} 
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="accountname">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Account Name
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.accountname}} 
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="billingaccountnumber">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Billing Account Number
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.billingaccountnumber}} 
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="customerstate">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Customer State </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.customerstate}}
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="mobilenumber">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Mobile Number </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.mobilenumber}}
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="outletid">
+                  <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Outlet ID </th>
+                  <td mat-cell *matCellDef="let element" class="columnalign">
+                    {{element.outletid}}
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="expirydate">
+                  <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Expiry Date </th>
+                  <td mat-cell *matCellDef="let element" class="columnalign">
+                    {{element.expirydate}}
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="arpu">
+                  <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> ARPU </th>
+                  <td mat-cell *matCellDef="let element" class="columnalign">
+                    {{element.arpu}}
+                  </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedDocumentColumns;"></tr>
+
+                <tr mat-row *matRowDef="let row; columns: displayedDocumentColumns;">
+                </tr>
+
+
+            </table>
+          </div>
+        </div>
+        
+        <div *ngIf="isBubble && (dataSource.filteredData.length < 8 || indentPagination)" >
+        <mat-paginator #paginator [length]="docsResponseDuplicate.length" [pageIndex]="0" showFirst class="flex items-center justify-end" style="background-color: transparent"
+            [pageSize]="25" [showFirstLastButtons]="true" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="pageChangeEvent($event)" style="margin-top: 30%; background: none;">
+        </mat-paginator>
+        </div>
+
+        <div *ngIf="!isBubble || (isBubble && dataSource.filteredData.length > 7 && !indentPagination)" >
+          <mat-paginator #paginator [length]="docsResponseDuplicate.length" [pageIndex]="0" class="flex items-center justify-end" style="background-color: transparent"
+              [pageSize]="25" [showFirstLastButtons]="true" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="pageChangeEvent($event)">
+          </mat-paginator>
+          </div>
+      </div>
+  </div>
+  </form>
+ </body>
+</html>

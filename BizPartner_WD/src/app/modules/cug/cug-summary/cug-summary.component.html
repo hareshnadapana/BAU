@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <body>
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between ml-8 mr-8 bg-default dark:bg-transparent">
+      <div class="flex-1 flex justify-between" style="align-items:center; padding: 10px 0px 10px 0px">
+        <div class="flex flex-col justify-start items-start">
+          <div>
+            <button mat-button (click)="previousPage()" color="primary" id="back" class="-ml-5">
+              <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+              <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+            </button>
+          </div>
+          <div class="flex-1 flex" style="align-items: center; display:flex;">
+            <div class="text-3xl md:text-4xl font-extrabold">
+              CUG (Closed User Group)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="docsResponse!=null" class="table-styling ml-8 mr-8" id="cug_summary_table">
+      <table mat-table [dataSource]="docsResponse" class="docs-table products-table" matSort fusePerfectScrollbar>
+        <ng-container matColumnDef="sequence">
+          <th mat-header-cell *matHeaderCellDef>Sequence</th>
+          <td mat-cell *matCellDef="let element">{{element.sequence}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="customerName">
+          <th mat-header-cell *matHeaderCellDef>Customer Name</th>
+          <td mat-cell *matCellDef="let element">{{element.customerName}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="customerId">
+          <th mat-header-cell *matHeaderCellDef>Customer ID</th>
+          <td mat-cell *matCellDef="let element">{{element.customerId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="msisdn">
+          <th mat-header-cell *matHeaderCellDef>MSISDN</th>
+          <td mat-cell *matCellDef="let element">{{element.msisdn}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cugId">
+          <th mat-header-cell *matHeaderCellDef>CUG ID</th>
+          <td mat-cell *matCellDef="let element">{{element.cugId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="plan">
+          <th mat-header-cell *matHeaderCellDef>Plan</th>
+          <td mat-cell *matCellDef="let element">{{element.plan}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedDocumentColumns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedDocumentColumns;"></tr>
+      </table>
+    </div>
+
+    <div class="row w-100 mt-8 mr-8 ml-8" style="max-width: fit-content; align-self: flex-end; font-size: 16px;">
+      <!-- <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="cancel()">
+        Cancel
+      </button> -->
+
+      <button mat-flat-button color='celcom-blue' class="button-styling" (click)="next()" >
+        Finish
+      </button>
+    </div>
+ </body>
+</html>

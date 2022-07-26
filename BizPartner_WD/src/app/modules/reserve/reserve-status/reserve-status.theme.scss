@@ -1,0 +1,11 @@
+@mixin submit-order-status-theme($theme) {    
+    $is-dark: map-get($theme, is-dark);      
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    #submit_order_column{
+        @if($is-dark){
+            background-color: #555555;
+        }
+    }
+}

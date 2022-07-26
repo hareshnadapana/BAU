@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between ml-8 mr-8 bg-default dark:bg-transparent">
+      <div class="flex-1 flex justify-between" style="align-items:center; padding: 10px 0px 10px 0px">
+        <div class="flex flex-col justify-start items-start">
+          <div>
+            <button mat-button (click)="back()" color="primary" id="back" class="-ml-5">
+              <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+              <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+            </button>
+          </div>
+          <div class="flex-1 flex" style="align-items: center; display:flex;">
+            <div class="text-3xl md:text-4xl font-extrabold">
+                CUG (Closed User Group)
+            </div>
+              <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- rounded-t-2xl -->
+    <div class="ml-8 mr-8 flex-none rounded-2xl shadow overflow-y-auto bg-card" cdkScrollable>
+      <form [formGroup]="CugSearchForm">
+        <div class="form-container" style="padding-top: 30px;">
+          <div class="customized-form px-6">
+            <div class="dropdown-custom customized-input">
+              <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                <mat-label class="required-marker">{{property[0].label}}</mat-label>
+                <mat-select [id]="property[0].key" formControlName="user_type" [placeholder]="property[0].label" [value]="property[0].value" (selectionChange)="formDisableOnChange($event)">
+                  <mat-option *ngFor="let op of property[0].enum" [value]="op.value">
+                    {{op.label}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="CugSearchForm.get('user_type').hasError('required')">{{ getDropdownErrorMessage("user_type") }}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="textbox-custom customized-input" *ngIf="formType == 'Customer'">
+              <mat-form-field  floatLabel="always" class="w-100 {{property[2].key}} bg-card fullwidth" hideRequiredMarker>
+                <mat-label class="required-marker">{{property[2].label}}</mat-label>
+                <input [disabled]="property[2].disabled" matInput [type]="property[2].type" [id]="property[2].key" class="form-control input-content"
+                input [disabled]="property[2].disable" [placeholder]="property[2].label" formControlName="customer_id_number" [pattern]="property[2].validators.pattern"
+                  [required]="property[2].validators.required" casetransform />
+                <mat-error *ngIf="CugSearchForm.get('customer_id_number').hasError('required')">{{ getDropdownErrorMessage("customer_id_number") }}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="customized-form px-6">
+            <div class="dropdown-custom customized-input" *ngIf="formType == 'Customer'">
+              <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth">
+                <mat-label>{{property[1].label}}</mat-label>
+                <mat-select [id]="property[1].key" formControlName="customer_id_type" [placeholder]="property[1].label" input [disabled]="property[1].disable">
+                  <mat-option *ngFor="let op of property[1].enum" [value]="op.value">
+                    {{op.label}} 
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="CugSearchForm.get('customer_id_type').hasError('required')">{{ getDropdownErrorMessage("customer_id_type") }}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div *ngIf="formType == 'Service Selection'" class="textbox-custom customized-input">
+              <mat-form-field  floatLabel="always" class="w-100 {{property[3].key}} bg-card fullwidth">
+                <mat-label>{{property[3].label}}</mat-label>
+                <input [disabled]="property[3].disable" matInput [type]="property[3].type" [id]="property[3].key" class="form-control input-content"
+                  [placeholder]="property[3].label" formControlName="service_number" [pattern]="property[3].validators.pattern"
+                  [required]="property[3].validators.required" casetransform />
+                <mat-error *ngIf="CugSearchForm.get('service_number').hasError('required')">{{ getDropdownErrorMessage("service_number") }}</mat-error>
+              </mat-form-field>
+            </div>
+            </div> 
+        </div>
+      </form>
+    </div>
+
+    <div class="row w-100 mt-8 mr-8 ml-8" style="max-width: fit-content; display:flex; align-self: flex-end; font-size: 16px;">
+      <!-- <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="cancel()">
+        Cancel
+      </button> -->
+
+      <div *ngIf="formType === undefined">
+        <button mat-flat-button color='celcom-blue' class="button-styling" (click)="next($event)" [disabled]="true" >
+          Continue
+        </button>
+      </div>
+
+      <div *ngIf="formType == 'Service Selection'">
+        <button mat-flat-button color='celcom-blue' class="button-styling" (click)="next($event)" [disabled]="!CugSearchForm.controls.user_type.valid || !CugSearchForm.controls.service_number.valid" >
+          Continue
+        </button>
+      </div>
+
+      <div *ngIf="formType == 'Customer'">
+        <button mat-flat-button color='celcom-blue' class="button-styling" (click)="next($event)" [disabled]="!CugSearchForm.controls.user_type.valid || !CugSearchForm.controls.customer_id_number.valid || !CugSearchForm.controls.customer_id_type.valid" >
+          Continue
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

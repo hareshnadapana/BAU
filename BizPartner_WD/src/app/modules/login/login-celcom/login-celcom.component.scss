@@ -1,0 +1,246 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+.biz-font {
+  font-size: 30px;
+  letter-spacing: 2px;
+  // font-weight: 300;
+}
+
+.body-container {
+  // background-color: #164396;
+  // background: url(./celcom_login.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 93vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-section {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-component {
+  width: 40%;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 15px 30px 15px;
+  background-color: white;
+}
+
+.choose-section {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 15%;
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container {
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.form-section {
+}
+
+.login-form-container {
+  height: 93vh;
+  background-color: white;
+  padding: 30px 10%;
+}
+
+.login-style {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-placing {
+  display: flex;
+  align-items: center;
+  margin: 35px 20% 5% 20px;
+  height: 20%;
+  justify-content: flex-end;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  width: 100%;
+  padding: 14px 40px !important;
+  color: white;
+}
+
+.mat-flat-button.mat-celcom-alternate-white {
+  background-color: white;
+  color: #009BDF;
+  width: 100%;
+  padding: 14px 40px !important;
+  border: 1px solid #009BDF;
+}
+
+.page-container {
+  height: 100vh;
+}
+
+.required-marker:after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+}
+
+.underlined-biz {
+  border-bottom: 3px solid #FDB934
+}
+
+.logo-login {
+  display: flex;
+  height: 10%;
+  justify-content: flex-end;
+  margin-bottom: 70px;
+  padding-left: 59%;
+}
+
+.backmobile {
+  width: 50%; 
+  background: #1f64a9 url(../../../../assets/images/logo/login_bg2.jpg) no-repeat top left; 
+  background-size: 90%;
+}
+.backmobiletwo {
+  width: 50%; 
+}
+
+.account-manager-section {
+  margin-top: 40px;
+  border: 1px solid red;
+  margin-right: 10%;
+  border-radius: 10px !important;
+  // height: fit-content;
+  height: 72px;
+  max-height: none;
+  width: 100%;
+  border: solid 1px #009BDF;
+
+  .account-manager-head-container {
+    font-size: 18px;
+    color:#1FA8E3;
+    padding-left:20px;
+  }
+
+  .icon-logo::after {
+    content: url(../../../../assets/images/logo/account_manager_icon.svg);
+  }
+
+  .icon-arrow::after {
+    content: url(../../../../assets/images/logo/right_arrow_login.svg);
+  }
+
+  &:hover {
+    background-color: #009BDF;
+
+    .account-manager-head-container {
+      color: white;
+    }
+  
+    .icon-logo::after {
+      content: url(../../../../assets/images/logo/account_manager_icon_hover.svg);
+    }
+  
+    .icon-arrow::after {
+      content: url(../../../../assets/images/logo/right_arrow_login_hover.svg);
+    }
+  }
+}
+
+.dealer-section {
+  margin-top: 50px;
+  margin-right: 10%;
+  border-radius: 10px !important;
+  // height: fit-content;
+  height: 72px;
+  max-height: none;
+  width: 100%;
+  border: solid 1px #009BDF;
+
+  .dealer-head-container {
+    font-size: 18px;
+    color:#1FA8E3;
+    padding-left:20px;
+  }
+
+  .icon-logo::after {
+    content: url(../../../../assets/images/logo/dealer_icon.svg);
+  }
+
+  .icon-arrow::after {
+    content: url(../../../../assets//images/logo/right_arrow_login.svg);
+  }
+
+  &:hover {
+    background-color: #009BDF;
+
+    .dealer-head-container {
+      color:white;
+    }
+  
+    .icon-logo::after {
+      content: url(../../../../assets/images/logo/dealer_icon_hover.svg);
+    }
+  
+    .icon-arrow::after {
+    content: url(../../../../assets//images/logo/right_arrow_login_hover.svg);
+    }
+  }
+}
+
+.signup-label {
+  color: #009BDF;
+  border-bottom: 1px solid #009BDF;
+  height: 25px;
+}
+
+
+@media screen and (min-width: 1px) and (max-width: 768px) {
+  .backmobile {
+    width: 0%;
+  }
+  
+  .backmobiletwo {
+    width: 100%; 
+  }
+  .login-form-container {
+    // height: 95vh;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .logo-login {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .login-form-container {
+    // height: 95vh;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .logo-login {
+    margin-bottom: 50px;
+  }
+}

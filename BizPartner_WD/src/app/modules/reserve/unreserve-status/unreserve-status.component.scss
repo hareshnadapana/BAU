@@ -1,0 +1,15 @@
+::ng-deep{
+    .p-panel .p-panel-footer{
+    text-align: center !important;
+    }
+}
+
+.msg-box{
+    width: 55% !important;
+}
+
+@media screen and (max-width: 768px) {
+.msg-box{
+    width: 90% !important;
+}
+}

@@ -1,0 +1,102 @@
+.w-100 {
+  width: 100% !important;
+}
+
+:host ::ng-deep .mat-form-field-required-marker {
+  color: red !important;
+}
+
+.size1, .size2 {
+  width: 50%;
+  margin-right: 1.5rem;
+}
+
+.card {
+  display: flex;
+}
+
+.table-section{
+  padding-bottom: 1.5rem !important;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-celcom-white-alternate {
+  background-color: white;
+  color: #009BDF;
+  border: 1px solid #009BDF;
+
+  .icon-logo {
+    content: url(../../../../assets/images/logo/attach_icon.svg);
+    margin-right: 10%;
+  }
+
+  &:hover {
+    background-color: rgba(0, 155, 223, 1);
+    color: white;
+
+    .icon-logo {
+      content: url(../../../../assets/images/logo/attach_icon_white.svg);
+    }
+  }
+}
+
+.button-styling {
+  margin-left: 1rem;
+}
+
+.table-styling {
+  box-shadow: 0 .125rem .3125rem rgba(0,0,0,.15);
+  margin-bottom: 30px;
+  display: block !important;
+  overflow-x: auto;
+}
+
+.mat-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  color: white !important;
+  background-color: #164396;
+  text-align: center;
+  font-size: 16px;
+}
+
+.mat-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .mat-header-cell {
+    padding: 0 10px;
+  }
+
+  .mat-cell {
+    padding: 0 10px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .size1, .size2 {
+    width: 100%;
+  }
+
+  .size2 {
+    padding-right: 0;
+  }
+}

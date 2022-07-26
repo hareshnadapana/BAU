@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ 
+ <div id="excel-table" style="margin-bottom: 10px">
+  <!-- Header -->
+  <div
+    class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between bg-default dark:bg-transparent">
+    <div class="flex-1 flex justify-between" style="align-items:center; padding: 10px 0px 0px 0px;">
+        <div class="flex flex-col justify-start items-start" >
+          <div >
+            <!-- <div>
+              <button mat-button color="primary" type="button" (click)="back()" id="back" class="-ml-5">
+                <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+                <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+              </button>
+            </div> -->
+            <div>
+              <div class="text-3xl md:text-4xl font-extrabold header-title">
+                <button mat-icon-button color="primary" type="button" (click)="back()" id="back">
+                  <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+                </button>
+                Dealer Incentive
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div *ngFor="let id of incentivesData; let dl = index" class="flex-none rounded-2xl shadow overflow-y-auto bg-card incentive-card">
+    <div>
+      <div class="mainbox">
+        <span class="font-bold" style="font-size: 18px">
+          Total Incentive as of {{id.month}}
+        </span>
+        <div style="display:flex; align-items: center;">
+          <!-- Export to
+          <button mat-button id="back" color="primary" class="-ml-4 -mr-5" (click)="downloadExcel(i)">
+            <img src="assets/images/logo/excel_icon.svg">
+          </button> -->
+          <!-- <button style="width: 135px" mat-flat-button color="celcom-blue" (click)="downloadPdf(i)">
+            Payment Advice
+          </button> -->
+          <button *ngIf="showPdf" mat-icon-button id="back" color="primary" class="mr-5" (click)="downloadExcel(dl)">
+            <img src="assets/images/logo/excel_icon.svg">
+          </button>
+        </div>
+      </div>
+      <div class="maincolumn" >
+        <div class="childcolumnexcept">
+          <div>
+            <span>
+              <p style="font-size: 16px; color: dimgrey">
+                Total Incentive
+              </p>
+              <div style="display:flex;">
+                <div style="height: 30px; padding-right:12px">
+                  <img style="height: 100%" src="assets/images/logo/incentive_icon.svg">
+                </div>
+                <div style="font-size: 26px; color: grey">RM </div>
+                <div style="font-size: 26px;color: #009BDF;font-weight: bold; padding-left: 5px;">{{id.totalIncentive}}</div>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div *ngFor="let detail of id.planWiseDetails | slice:0:5" class="childcolumn">
+          <div class="rounded-2xl child-boxes">
+            <div style="display:flex; align-items: center;">
+              <!-- height:48px -->
+            <span>
+              <p style="height:62px">
+                {{detail.planName}}
+              </p>
+              <div style="display:flex; align-items: center;">
+                <div style="color: grey">RM </div>
+                <div style="color: green;font-weight: bold; padding-left: 5px;">{{detail.incentive}}</div>
+              </div>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</html>

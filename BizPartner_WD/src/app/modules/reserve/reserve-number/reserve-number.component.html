@@ -1,0 +1,124 @@
+ <body class="mb-16">
+    <!-- Header -->
+    <div
+    class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between maincontain bg-default dark:bg-transparent">
+    <div style="padding: 10px 0px 10px 0px;">
+      <!-- <div>
+        <button mat-button (click)="back()" color="primary" id="back" class="-ml-5">
+          <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+          <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+        </button>
+      </div> -->
+      <div class="text-3xl md:text-4xl font-extrabold">
+        <button mat-icon-button (click)="back()" color="primary" id="back">
+          <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+        </button>
+        Reserve Number
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-none rounded-2xl shadow overflow-y-auto bg-card maincontain" cdkScrollable>
+    <form class="" [formGroup]="ReserveNumberForm">
+          <div class="row" style="width:100%">
+            <div class="column">
+              <!-- padding: 20px 66px 20px 30px -->
+              <!-- <div class="dropdown-custom" style="margin-right: 1.5rem"> -->
+              <div class="dropdown-custom">
+                <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[0].label}}</mat-label>
+                    <mat-select [id]="property[0].key" formControlName="region" [placeholder]="property[0].title" required>
+                    <mat-option *ngFor="let op of property[0].enum" [value]="op.value">
+                      {{op.label}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="ReserveNumberForm.get('region').hasError('required')">{{ getDropdownErrorMessage("region") }}</mat-error>
+                </mat-form-field>
+              </div>
+
+              <!-- <div class="dropdown-custom" style="margin-right: 1.5rem"> -->
+              <div class="dropdown-custom">
+                <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[2].label}}</mat-label>
+                    <mat-select [id]="property[2].key" formControlName="criteria" [placeholder]="property[2].title" required>
+                    <mat-option *ngFor="let op of property[2].enum" [value]="op.value">
+                      {{op.label}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="ReserveNumberForm.get('criteria').hasError('required')">{{ getDropdownErrorMessage("criteria") }}</mat-error>
+                </mat-form-field>
+              </div>
+
+              <!-- <div class="textbox-custom" style="margin-right: 1.5rem"> -->
+              <!-- <div class="textbox-custom" >
+                <mat-form-field  floatLabel="always" class="w-100 {{property[4].key}} bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[4].label}}</mat-label>
+                  <input [disabled]="property[4].disabled" matInput type="number" [id]="property[4].key" class="form-control input-content"
+                  [placeholder]="property[4].title" formControlName="quantity"
+                  required casetransform />
+                  <mat-error *ngIf="requiredCheck4.invalid && requiredCheck4.errors.required">{{ getDropdownErrorMessage("quantity") }}</mat-error>
+                </mat-form-field>
+              </div> -->
+
+              <div class="dropdown-custom">
+                <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[5].label}}</mat-label>
+                  <mat-select [id]="property[5].key" formControlName="outletID" [placeholder]="property[5].title" required >
+                    <mat-option *ngFor="let op of outletIDApi" [value]="op.value">
+                      {{op.label}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="ReserveNumberForm.get('outletID').hasError('required')">{{ getDropdownErrorMessage("outletID") }}</mat-error>
+                </mat-form-field>
+              </div>
+
+            </div>
+
+            <div class="columntwo" >
+              <div class="dropdown-custom" >
+                <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[1].label}}</mat-label>
+                  <!-- style="white-space: pre-wrap;" -->
+                  <mat-select [id]="property[1].key" formControlName="mobilePrefix" [placeholder]="property[1].title" required>
+                    <mat-option *ngFor="let op of property[1].enum" [value]="op.value">
+                      {{op.label}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="ReserveNumberForm.get('mobilePrefix').hasError('required')">{{ getDropdownErrorMessage("mobilePrefix") }}</mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="textbox-custom">
+                <mat-form-field  floatLabel="always" class="w-100 {{property[3].key}} bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[3].label}}</mat-label>
+                  <input matInput type="tel" [id]="property[3].key" class="form-control input-content"
+                  [placeholder]="property[3].title" formControlName="numberPattern"
+                  required casetransform />
+                  <!-- <mat-error *ngIf="requiredCheck3.invalid && requiredCheck3.errors.pattern" >{{ property[3].error.pattern }}</mat-error> -->
+                  <mat-error *ngIf="requiredCheck3.invalid && requiredCheck3.errors.required">{{ getDropdownErrorMessage("numberPattern") }}</mat-error>
+                </mat-form-field>
+              </div>
+
+              <!-- <div class="dropdown-custom">
+                <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" hideRequiredMarker>
+                  <mat-label class="required-marker">{{property[5].label}}</mat-label>
+                  <mat-select [id]="property[5].key" formControlName="outletID" [placeholder]="property[5].title" required >
+                    <mat-option *ngFor="let op of outletIDApi" [value]="op.value">
+                      {{op.label}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="ReserveNumberForm.get('outletID').hasError('required')">{{ getDropdownErrorMessage("outletID") }}</mat-error>
+                </mat-form-field>
+              </div> -->
+
+            </div>
+          </div>
+      </form>
+  </div>
+  <div class="mr-8 mt-8" style="align-items: center; display:flex; align-self: flex-end">
+    <button style="width: 140px" mat-flat-button color="celcom-blue" type='submit' (click)="next()" [disabled]="!ReserveNumberForm.valid">
+      Continue
+    </button>
+  </div>
+
+ </body>

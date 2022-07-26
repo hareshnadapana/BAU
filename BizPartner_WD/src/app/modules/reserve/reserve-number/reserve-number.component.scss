@@ -1,0 +1,63 @@
+.column {
+float: left;
+width: 50%;
+padding: 20px 15px 20px 30px;
+}
+
+.columntwo {
+float: left;
+width: 50%;
+padding: 20px 30px 20px 15px;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+  
+.mat-form-field-required-marker {
+  color: red;
+}
+
+.required-marker:after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.fullwidth {
+  width: 100% !important
+}
+
+//////////////////////////////////////////@at-root
+.maincontain {
+  margin: 0 16px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 320px) {
+  .column {
+    float: left;
+    width: 100% !important;
+    padding: 20px 20px 0px 20px
+  }
+  .columntwo {
+    float: left;
+    width: 100% !important;
+    padding: 0px 20px 20px 20px
+  }
+}

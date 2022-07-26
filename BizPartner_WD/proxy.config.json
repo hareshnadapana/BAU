@@ -1,0 +1,113 @@
+{
+  "/getreservenumberlist": {
+    "target": "https://localhost:8000/frontoffice/api/getreservenumberlist",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getreservenumberlist": ""}
+  },
+
+  "/getunreservenumberlist": {
+    "target": "https://localhost:8000/frontoffice/api/getunreservenumberlist",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getunreservenumberlist": ""}
+  },
+
+  "/assignreservenumber": {
+    "target": "https://localhost:8000/frontoffice/api/assignreservenumber",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/assignreservenumber": ""}
+  },
+
+  "/storeidreservenumber": {
+    "target": "https://localhost:8000/frontoffice/api/storeidreservenumber",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/storeidreservenumber": ""}
+  },
+
+  "/queryreservenumber": {
+    "target": "https://localhost:8000/frontoffice/api/queryreservenumber",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/queryreservenumber": ""}
+  },
+
+  "/blacklistCheck": {
+    "target": "https://localhost:8000/frontoffice/api/blacklistCheck",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/blacklistCheck": ""}
+  },
+
+  "/dealerRetrieval": {
+    "target": "https://localhost:8000/frontoffice/api/dealerRetrieval",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/dealerRetrieval": ""}
+  },
+
+  "/campaignlist": {
+    "target": "https://localhost:8000/frontoffice/api/campaignlist",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/campaignlist": ""}
+  },
+
+  "/getCampaignFullList": {
+    "target": "https://localhost:8000/frontoffice/api/getCampaignFullList",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getCampaignFullList": ""}
+  },
+
+  "/getPincodeQuery": {
+    "target": "https://localhost:8000/frontoffice/api/getPincodeQuery",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getPincodeQuery": ""}
+  },
+
+  "/getCustStatus": {
+    "target": "https://localhost:8000/frontoffice/api/getCustStatus",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getCustStatus": ""}
+  },
+
+  "/getDeleteCampaign": {
+    "target": "https://localhost:8000/frontoffice/api/getDeleteCampaign",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getDeleteCampaign": ""}
+  },
+
+  "/getManageInventory": {
+    "target": "https://localhost:8000/frontoffice/api/getManageInventory",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getManageInventory": ""}
+  },
+
+  "/getBlacklistCustName": {
+    "target": "https://localhost:8000/frontoffice/api/getBlacklistCustName",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getBlacklistCustName": ""}
+  },
+
+  "/getUserHierarchyCW": {
+    "target": "https://localhost:8000/frontoffice/api/getUserHierarchyCW",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getUserHierarchyCW": ""}
+  },
+
+  "/getIncentives": {
+    "target": "https://localhost:8000/frontoffice/api/getIncentives",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/getIncentives": ""}
+  }
+}

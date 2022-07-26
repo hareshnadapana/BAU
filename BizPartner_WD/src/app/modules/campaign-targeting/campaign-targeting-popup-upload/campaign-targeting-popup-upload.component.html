@@ -1,0 +1,132 @@
+<!-- <div class="h-full  min-h-full max-h-full pr-3"> -->
+<div class="relative" style="display: flex; justify-content: space-between;">
+<span class="side-heading pl-1.5">
+    Attachment
+</span>
+<button mat-icon-button class="close" (click)="back()">
+    <mat-icon>close</mat-icon>
+</button>
+</div>
+<!-- <div class="relative min-h-220 max-h-400 h-24 min-h-full table-section" > -->
+<!-- <div class="relative table-section" > -->
+<form [formGroup]="campaignPopupForm" (submit)="closeDialog()" style="height:81%; overflow-y: auto; margin: 10px 0 30px 0">
+    <!-- <div class="flex-auto pt-5 sm:pt-5 rounded-2xl bg-card overflow-y-auto" cdkScrollable> -->
+    
+        <!-- <div class="h-full  min-h-full max-h-full"> -->
+        <div>
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[0].label}}" class="w-full {{property[0].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[0].label}}</mat-label>
+                    <div *ngIf="property[0].prefix" matPrefix>{{property[0].prefix}}</div>
+                    <input [disabled]="property[0].disabled" matInput [type]="property[0].type" [id]="property[0].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[0].label"
+                        [pattern]="property[0].validators.pattern" [formControl]="requiredCheck0" formControlName="campaignname"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[0].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[1].label}}" class="w-full {{property[1].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[1].label}}</mat-label>
+                    <div *ngIf="property[1].prefix" matPrefix>{{property[1].prefix}}</div>
+                    <input [disabled]="property[1].disabled" matInput [type]="property[1].type" [id]="property[1].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[1].label"
+                        [pattern]="property[1].validators.pattern" [formControl]="requiredCheck1" formControlName="accountname"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[1].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[2].label}}" class="w-full {{property[2].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[2].label}}</mat-label>
+                    <div *ngIf="property[2].prefix" matPrefix>{{property[2].prefix}}</div>
+                    <input [disabled]="property[2].disabled" matInput [type]="property[2].type" [id]="property[2].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[2].label"
+                        [pattern]="property[2].validators.pattern" [formControl]="requiredCheck2" formControlName="billingaccno"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[2].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[3].label}}" class="w-full {{property[3].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[3].label}}</mat-label>
+                    <div *ngIf="property[3].prefix" matPrefix>{{property[3].prefix}}</div>
+                    <input [disabled]="property[3].disabled" matInput [type]="property[3].type" [id]="property[3].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[3].label"
+                        [pattern]="property[3].validators.pattern" [formControl]="requiredCheck3" formControlName="custstate"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[3].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[4].label}}" class="w-full {{property[4].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[4].label}}</mat-label>
+                    <div *ngIf="property[4].prefix" matPrefix>{{property[4].prefix}}</div>
+                    <input [disabled]="property[4].disabled" matInput [type]="property[4].type" [id]="property[4].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[4].label"
+                        [pattern]="property[4].validators.pattern" [formControl]="requiredCheck4" formControlName="mobileno"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[4].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[5].label}}" class="w-full {{property[5].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[5].label}}</mat-label>
+                    <div *ngIf="property[5].prefix" matPrefix>{{property[5].prefix}}</div>
+                    <input [disabled]="property[5].disabled" matInput [type]="property[5].type" [id]="property[5].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[5].label"
+                        [pattern]="property[5].validators.pattern" [formControl]="requiredCheck5" formControlName="outletid"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[5].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox-custom">
+                <mat-form-field id="{{property[6].label}}" class="w-full {{property[6].key}} flex-auto gt-xs:pr-3"
+                    [floatLabel]="'always'">
+                    <mat-label>{{property[6].label}}</mat-label>
+                    <div *ngIf="property[6].prefix" matPrefix>{{property[6].prefix}}</div>
+                    <input [disabled]="property[6].disabled" matInput [type]="property[6].type" [id]="property[6].key"
+                        class="form-control input-content" (keyup)="onKeyUp($event)" [placeholder]="property[6].label"
+                        [pattern]="property[6].validators.pattern" [formControl]="requiredCheck6" formControlName="arpu"
+                        (change)="valueChangeEvent($event.value,'')" [required]="property[6].validators.required"
+                        casetransform>
+                </mat-form-field>
+            </div>
+            
+            <!-- <div class=" ml-8" style="display:flex; justify-content:end; font-size: 16px; background-color: white !important">
+                <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="back()">
+                  Cancel
+                </button>
+          
+                <button mat-flat-button color='celcom-blue' class="button-styling" type="submit" [disabled]="campaignPopupForm.valid">
+                    Add
+                </button>
+            </div> -->
+
+        </div>
+    <!-- </div> -->
+    
+</form>
+<div class=" ml-8" style="display:flex; justify-content:end; font-size: 16px; background-color: white !important">
+    <button mat-flat-button color='celcom-white-alternate' class="button-styling" (click)="back()">
+      Cancel
+    </button>
+
+    <button mat-flat-button color='celcom-blue' class="button-styling" type="submit" [disabled]="campaignPopupForm.valid">
+      Create
+    </button>
+</div>
+<!-- </div> -->
+<!-- </div> -->

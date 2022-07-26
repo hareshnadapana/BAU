@@ -1,0 +1,1824 @@
+{
+    
+    "context": {
+        "serviceContext": "/frontoffice"
+    },
+    "validationRequired": {
+        "accountName": "Account Name is Required"
+    },
+    "validationError": {
+        "accountName": "Invalid Pattern"
+    },
+    "tooltip":{
+        "cart":"Cart",
+        "setting":"Settings",
+        "promotions":"Promotions",
+        "prevoius":"Previous",
+        "next":"Next",
+        "goToCart":"Go To Cart",
+        "addNotes":"Add Notes",
+        "uploadDoc":"Upload Documents"
+    },
+    "btn": {
+        "shopnow":"Shop Now",
+        "ok": "Ok",
+        "search": "Search",
+        "filter": "Filter",
+        "clear": "Clear",
+        "apply": "Apply",
+        "close": "Close",
+        "cancel": "Cancel",
+        "save": "Save",
+        "edit": "Edit",
+        "remove": "Remove",
+        "add": "Add",
+        "submit": "Submit",
+        "getoffers": "View Offers",
+        "addNewProduct": "Add New Product",
+        "addToCart": "Add",
+        "viewCart": "View Cart",
+        "checkout": "Proceed to Checkout",
+        "next": "Next",
+        "applyChanges": "Apply Changes",
+        "previous": "Previous",
+        "back": "Back",
+        "emailOnly": "Email Only",
+        "paper": "Paper",
+        "whitemail": "WhiteMail and Email",
+        "paperLargeFont": "Paper Large Font",
+        "paperBraille": "Paper Braille",
+        "audio": "Audio",
+        "itemised": "Itemised",
+        "summary": "Summary",
+        "addIndividual": "Add Individual",
+        "addOrganization": "Add Organization",
+        "addPrentAccount": "Add Parent Account",
+        "assign": "Assign",
+        "prepaid": "Prepaid",
+        "postpaid": "Postpaid",
+        "monthly": "Monthly",
+        "annual": "Annual",
+        "quarterly": "Quarterly",
+        "weekly": "Weekly",
+        "fortNightly": "Fort-Nightly",
+        "paperNormalFont": "Paper Normal Font",
+        "skip": "Skip",
+        "yes": "Yes",
+        "paynow": "Pay Now",
+        "reset": "RESET",
+        "update": "UPDATE",
+        "delete": "Delete",
+        "selected": "Selected",
+        "done": "Done",
+        "proceed": "Proceed",
+        "sort": "Sort",
+        "Search": "Search",
+        "Trend": "Trend",
+        "makePayment": "Make Payment",
+        "Cancel": "Cancel",
+        "Submit": "Submit",
+        "searchParty": "Search Party",
+        "lookupParty": "Lookup Party",
+        "addContact": "Add Contact",
+        "waive":"Waive",
+        "addSupplementary":"Add Supplementary"
+
+    },
+    "label": {
+        "search": "Search",
+        "searchbar": "Search for customer, account, subscriber or order",
+        "heading": "Place orders and track them right here",
+        "found": "Results Found",
+        "showing": "Showing",
+        "to": "to",
+        "of": "of",
+        "net": "Net",
+        "title": "Title",
+        "date": "Date",
+        "contact": "Contact",
+        "notes": "Notes",
+        "location": "Location",
+        "oneTimeCharge": "One Time",
+        "shoppingCart": "Shopping Cart",
+        "manage-document": "manage-document",
+        "accountContact":"accountContact",
+        "discount": "Discount",
+        "entries": "Entries",
+        "customerID": "Customer ID",
+        "type": "Type",
+        "name": "Name",
+        "subscription": "Subscription",
+        "lifeTime": "Life Time",
+        "email": "Email",
+        "phoneNo": "Phone no",
+        "status": "Status",
+        "nrc": "One Time Charge",
+        "item": "Item",
+        "accountName": "Account Name",
+        "accountBasic": "Account Basic",
+        "accountType": "Account Type",
+        "accountBillingTitle": "Account Billing",
+        "accountBillingPreference": "Account Billing Preference",
+        "prepaid": "Prepaid",
+        "postpaid": "Postpaid",
+        "addParent": "Add Parent",
+        "yes": "Yes",
+        "no": "No",
+        "billableAccount": "Billable Account",
+        "payableAccount": "Payable Account",
+        "additionalDetails": "Do you want to add Additional Details?",
+        "skip": "Skip",
+        "accountCategory": "Account Category",
+        "soaType": "SOA Type",
+        "customerBilling": "Customer Billing Info",
+        "customerTin": "Customer Tin",
+        "taxCode": "Tax Code",
+        "paymentMode": "Payment Mode",
+        "accSeg": "Account Segment",
+        "parentAccount": "Parent Account",
+        "addParentAccount": "Add Parent Account",
+        "accountId": "Account ID",
+        "accountBilling": "Account Billing Details",
+        "accountBillable": "Is the Account Billable?",
+        "accountPayable": "Is the Account Payable?",
+        "currency": " Base Currency",
+        "creditLimit": "Credit Limit",
+        "accountPreference": "Account Billing Preference",
+        "billFreq": "Bill Frequency",
+        "billPref": "Billing Preference",
+        "billCycle": "Bill Cycle",
+        "invoice": "Invoice Details",
+        "media": " Invoice Media",
+        "format": "Invoice Format",
+        "preference": "Invoice Preference",
+        "accountAdditional": "Account Additional Details",
+        "waiveTax": "Waive Tax?",
+        "delay": "Should Credit Delay be Default?",
+        "project": "HOBS",
+        "accounts": "ACCOUNTS",
+        "contactdetails": "CONTACT DETAILS",
+        "phone": "PHONE",
+        "address": "ADDRESS",
+        "subsandprods": "SUBSCRIPTIONS AND PRODUCTS",
+        "id": "ID",
+        "value": "VALUE",
+        "monthlycharge": "Monthly Charge",
+        "bundleditems": "BUNDLED ITEMS",
+        "property": "PROPERTY",
+        "party" : "Party",
+        "result": "matching results",
+        "newContact": "New Contact",
+        "contacts": "Contacts",
+        "addRole": "Add Role",
+        "add": "Add",
+        "searchContact": "Search contacts",
+        "deleteContact": "Delete Contact"
+    },
+    "placeholder": {
+        "globalfilter": "Global Filter"
+    },
+    "type": [
+        {
+            "label": "All",
+            "value": "All"
+        },
+        {
+            "label": "Residential",
+            "value": "Residential"
+        },
+        {
+            "label": "Commercial",
+            "value": "Commercial"
+        }
+    ],
+    "subscription": [
+        {
+            "label": "All",
+            "value": "All"
+        },
+        {
+            "label": "Bronze",
+            "value": "Bronze"
+        },
+        {
+            "label": "Silver",
+            "value": "Silver"
+        },
+        {
+            "label": "Gold",
+            "value": "Gold"
+        },
+        {
+            "label": "Platinum",
+            "value": "Platinum"
+        }
+    ],
+    "status": [
+        {
+            "label": "All",
+            "value": "All"
+        },
+        {
+            "label": "Active",
+            "value": "Active"
+        },
+        {
+            "label": "Not Active",
+            "value": "Not Active"
+        }
+    ],
+    "lifeTime": [
+        {
+            "label": "All",
+            "value": "0"
+        },
+        {
+            "label": "<3 months",
+            "value": "-3"
+        },
+        {
+            "label": "<6 months",
+            "value": "-6"
+        },
+        {
+            "label": "<1 year",
+            "value": "1"
+        },
+        {
+            "label": "<2 years",
+            "value": "2"
+        },
+        {
+            "label": "<3 years",
+            "value": "3"
+        },
+        {
+            "label": "<4 years",
+            "value": "4"
+        },
+        {
+            "label": "<5 years",
+            "value": "5"
+        }
+    ],
+    "genericform": {
+        "btn": {
+            "submit": "SAVE",
+            "clear": "CANCEL"
+        }
+    },
+    "hobs-menu": {
+        "search": "Search"
+    },
+    "addaddress": {
+        "btn": {
+            "submit": "Submit"
+        }
+    },
+    "customerPreview": {
+        "label": {
+            "headline": "Customer creation Error",
+            "title": "Basic Details",
+            "next": "Next"
+        }
+    },
+    "accountPreview": {
+        "label": {
+            "headline": "Account creation Error",
+            "title": "Basic Details",
+            "next": "Next"
+        },
+        "btn": {
+            "back": "Back",
+            "collapse": "Collapse All"
+        }
+    },
+    "account-contact": {
+        "label": {
+            "header": "Billing Contact"
+        },
+        "btn": {
+            "back": "Back"
+        }
+    },
+     
+    "account-additional-details": {
+        "label": {
+            "header": "Additional Detail",
+            "title": "Basic Details",
+            "next": "Next"
+        }
+    },
+    "eventAddSlots": {
+        "label": {
+            "secondaryText": " Select one of the available slots."
+        },
+        "message": {
+            "title": "Title is required!",
+            "validTitle": ">Invalid.Please enter valid Title of maximum 15 characters!",
+            "notes": "Notes is required!",
+            "validNotes": "Invalid.Please enter Notes of maximum 255 characters!"
+        }
+    },
+    "customer":{
+        "error": {
+            "cannotproceed": "Cannot Proceed with the flow"
+        }
+    },
+    "orderappError": {
+        "errorcode": {
+            "generalmessage": "Something went wrong. We are checking. Please check after some time",
+            "1000": "Something went wrong. We are checking. Please check after some time"
+
+        },
+        "custErrorcode": {
+            "1000": "There seems to be a problem creating Customer." ,
+            "ERR_BEAN_VAL": "Invalid Dob. Age should be in the range of (23,80) years",
+            "8898": "Customer already exists"
+        },
+        "serviceSelectionError": {
+            "1000": "There seems to be a problem in loading the services, You can try loading again."
+
+        },
+        "processFlowError": {
+            "1000": "Something went wrong. We are checking. Please check after some time" 
+        },
+        "subsError": {
+            "1000": "Selected service is not available at the address currently" 
+        },
+        "serviceAvailErrorcode": {
+            "1000": "There seems to be a problem in checking availability, You can try loading again."
+        },
+        "serviceOfferError": {
+            "1000": "There seems to be a problem in loading the offers.You can try again.",
+            "9005": "Invalid ProductOffering Used in the Request",
+            "500": "PC services are down.We are checking. Please check after some time",
+            "600": "Cart services are down,We are checking. Please check after some time"
+        },
+        "subscriptionCartError": {
+            "1000": "There seems to be a problem in loading the current cart,You can try again.",
+            "500": "PC services are down.We are checking. Please check after some time",
+            "600": "Cart services are down,We are checking. Please check after some time"
+        },
+        "productListError": {
+            "noMatch": "No match found",
+            "noOffer": "There are No offers for this selection."
+        },
+        "cartViewError": {
+            "1000": "There seems to be a problem in performing this update,You can try again.",
+            "emptyCart": "There are no items in the cart,Browse through offers and add items to the cart."
+        },
+        "cartItemConfigError": {
+            "1000": "There seems to be a problem in loading the offerr, You can try loading again."
+        },
+        "acctCreationError": {
+            "1000": "There seems to be a problem in creating account. You can try again."
+        },
+        "eventVIewSimpleError": {
+            "1000": "There seems to be a problem saving/Deleting Appointments,You can try again."
+        },
+        "captureShippingError": {
+            "1000": "There seems to be a problem in loading the offer, You can try loading again."
+        },
+        "shippingDetailsError": {
+            "1000": "There seems to be a problem in loading the offer, You can try loading again."
+        },
+        "customerLookUpError": {
+            "1000": "There seems to be a problem in loading the search results, You can try loading again."
+        },
+        "accountLookUpError": {
+            "1000": "There seems to be a problem in loading the services, You can try loading again."
+        },
+        "submitOrderError": {
+            "1000": "There seems to be a problem in placing the order, You can try again."
+        },
+        "installmentError": {
+            "1000": "There seems to be a problem in loading in the cart, You can try loading again."
+        },
+        "preOrderchkError": {
+            "1000": "There seems to be a problem in pre-order check. You can try again.",
+            "changePkgError": "Cannot proceed with Change Package for the selected subscription",
+            "ARFerror": "Cannot proceed with Add Remove Features for the selected subscription",
+            "CSAerror": "Cannot proceed with Change Service Address for the selected subscription",
+            "PreToPosterror": "Cannot proceed with the covert to Postpaid for the selected subscription",
+            "AddSubscriberError": "Cannot proceed with the Add New Subscription"
+        },
+        "csaAddressError": {
+            "1000": "There seems to be a problem in adding the address, You can try loading again."
+        },
+        "csaEditAddressError": {
+            "1000": "There seems to be a problem in adding the address, You can try loading again."
+        },
+        "commonAddressError": {
+            "1000": "There seems to be a problem fetching Addresses, You can try either enter manual address and proceed or wait for some time."
+        },
+        "csaPackageAvailError": {
+            "1000": "There seems to be a problem while fetching the offer, You can try loading again."
+        },
+        "csaQualificationAvailError": {
+            "9901": "There seems to be a problem while checking offer availablity, You can try loading again."
+        }
+    },
+    "csa-edit-address": {
+        "label": {
+            "addressPreview": "Address Preview",
+            "successMsg": "Address updated successfully",
+            "success": "Success info",
+            "ok": "ok"
+        },
+        "form": {
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "addressLine3": "Address Line 3",
+            "city": "City",
+            "state": "State",
+            "country": "Country",
+            "pincode": "Pincode"
+        }
+    },
+    "quick-order": {
+        "trackbtn":"Track Order",
+        "label": {
+            "successMsg": "Order Submtted Successfully" 
+        }
+    },
+   
+    "csa-offer-availability-check": {
+        "label": {
+            "existingOffer": "Existing offer is available in the new address",
+            "chooseOption": "Do you want to retain the same or select a new offer",
+            "toRetain": "Yes, Retain",
+            "selectNew": "No, Select new",
+            "notAvailable": "Existing offer is not available in the new address",
+            "selectNewOffer": "You have to select a new offer",
+            "changeAddress": "Confirm change of service address",
+            "existingAddress": "Existing address",
+            "newAddress": "New address",
+            "retained": "The existing offer is retained in new address",
+            "confirmChange": "Confirm change of service address",
+            "monthly": "Monthly",
+            "ok": "Ok",
+            "rc": "RC",
+            "nrc": "NRC",
+            "existingOfferAvailable": "Existing Offer",
+            "offerSelected": "New offer selected"
+        }
+    },
+    "check-address": {
+        "label": {
+            "sameAddress": "New address entered is same as existing address",
+            "correctAddress": " Please check and enter the correct address",
+            "toRetain": "Yes, Retain",
+            "selectNew": "No, Select new"
+        }
+    },
+    "cartItemConfigure": {
+        "label": {
+            "headline": "Configure Selected Service"
+        }
+    },
+    "manage-document": {
+        "label": {
+            "name": "Name",
+            "value": "Value",
+            "manadatory": "Mandatory",
+            "uploadDoc_header":"Upload Document",
+            "data": "",
+            "commentDesc": "Ex. AadharCard document..."
+        },
+        "message": {            
+            "disabledMsg": ": All the document type with this categories already uploaded!. Please choose another category",
+            "fileSizeMsg": "File size should be <=",
+            "fileTypeValidationMsg": "Only files with the following extensions are allowed : ",
+            "sameFile": "File with same name has already exist. Choose a different file!",
+            "docType": "Document Type is required."
+        }
+    },
+    "cart-view": {
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "cartlibTemp": {
+        "label": {
+            "submitOrder": "Proceed to Order",
+            "continueOrdering": "Continue Purchasing"
+        }
+    },
+    "filterMenu": {
+        "label": {
+            "header": "No filters found"
+        }
+    },
+    "itemPrice": {
+        "label": {
+            "pricetypetitle": "Net One Time",
+            "taxMessage": "Note : All amounts include tax"
+        }
+    },
+    "itemPriceHeader": {
+        "label": {
+            "oneTimeCharge": "One Time",
+            "upfrontCharge": "Up-front"
+        }
+    },
+    "itemPriceOverride": {
+        "title":"Price Override",
+        "priceTypeTitle": "Net One Time",
+        "taxMessage": "Note : All amounts include tax",
+        "rcHelp": "This will override the net monthly",
+        "nrcHelp": "This will override the net one time",
+        "resetDefault": "Reset",
+        "errorNumber":"The value must contain only numbers",
+        "errorValue":"The value must not be more than listed value"
+    },
+    "shippingAddress": {
+        "title": "Shipping Details",
+        "quantity": "Quantity",
+        "shipping": "Shipping",
+        "btn": {
+            "edit": "Edit",
+            "viewcart": "View Cart"
+        }
+    },
+    "shippingAddressCapture": {
+        "title": "Select a Delivery Adddress",
+        "checkLabel": "Select this address",
+        "inputLabel": "Search Address",
+        "btn": {
+            "addAddress": "Add New Address",
+            "edit": "Edit",
+            "delete": "Delete",
+            "next": "Next",
+            "cancel": "Cancel"
+        }
+    },
+    "shippingAddressOption": {
+        "title": "Shipping Details",
+        "prodLabel": "Shippment of ",
+        "deliveryLabel": "Delivery To",
+        "btn": {
+            "next": "Next",
+            "back": "Back"
+        }
+    },
+    "search": {
+        "btn": {
+            "assistedsearch": "Advance Search",
+            "search": "Search",
+            "clear": "Clear"
+        },
+        "title": {
+            "search": "Address",
+            "assistedsearch": "Advanced Search",
+            "searchin": "Search In"
+        },
+        "placeholder": {
+            "search": "Search Postal Code"
+        },
+        "label": {
+            "in": "Search in "
+        },
+        "btn.assistedsearch": "Assisted Search",
+        "btn.search": "Search",
+        "btn.clear": "Clear",
+        "title.assistedsearch": "Search",
+        "title.searchin": "Search In",
+        "title.search": "Search",
+        "placeholder.search": "Search"
+    },
+    "hobs-datatable": {
+        "title": "Results",
+        "totalrecords": "Total Records",
+        "filter": "Filter",
+        "selected": "Records selected",
+        "actions": {
+            "edit": {
+                "label": "Edit Label",
+                "description": "Edit Description",
+                "price": "Edit Price",
+                "offer": "Edit Offer Params",
+                "attrs": "Edit Attributes"
+            }
+        },
+        "header": {
+            "id": "ID",
+            "offerName": "Name",
+            "label": "Label",
+            "description": "Description",
+            "productType": "Type",
+            "price": "Price"
+        },
+        "noselection": "No rows selected"
+    },
+    "account-type": {
+        "label": {
+            "header": "Capture Account",
+            "add-account": "Add Account",
+            "lookup": "Existing Account"
+        }
+    },
+    "account-details": {
+        "label": {
+            "header": "Basic Details"
+        },
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "account-billing-details": {
+        "label": {
+            "header": "Billing Details"
+        },
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "add-contact-for-account": {
+        "label": {
+            "headerContact": "Edit Contact",
+            "headerAddress": "Edit Address"
+        },
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "account-billing-preference-details": {
+        "label": {
+            "header": "Billing Preference Details"
+        }
+    },
+    "account-look-up": {
+        "lookup-header": "Account Lookup",
+        "name": "Name",
+        "btn": {
+            "back": "Back",
+            "lookup-btn": "New Account"
+        }
+    },
+    "customer-look-up-dialog": {
+        "label": {
+            "header": "Select Customer Option",
+            "new-customer": "Create New Customer",
+            "exist-customer": "Continue With Existing Customer"
+        }
+    },
+    "addContact": {
+        "form": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobileNumber": "Mobile Number",
+            "email": "Email",
+            "address": "Address",
+            "company": "Company",
+            "jobTitle": "Job Title"
+        },
+        "message": {
+            "firstname": "First Name is required!",
+            "lastname": "Last Name is required!",
+            "email": "Email is required!",
+            "mobile": " Mobile number is required!",
+            "ValidmobileNo": "Invalid.Please enter valid 10 digits Mobile Number!",
+            "ValidInput": "Invalid.Please enter only alphabets!",
+            "address": "Address is required!",
+            "company": "Company is required!",
+            "jobTitle": "Job Title is required!",
+            "ValidEmail": "Invalid.Please enter valid email, Max length: 40!",
+            "ValidAddress": "Invalid.Please enter valid Address!"
+        }
+    },
+    "addressServiceSelection": {
+        "sidebar": {
+            "header": "Lead Creation"
+        },
+        "form": {
+            "name": "Name",
+            "email": "Email Address",
+            "phone": "Phone",
+            "notes": "Notes"
+        },
+        "message": {
+            "name": "Name is required!",
+            "email": "Email is required!",
+            "phone": "Phone is required!",
+            "notes": "Notes is required!",
+            "validName": "Invalid.Please enter only alphabets!",
+            "validEmail": "Invalid.Please enter valid email!",
+            "validPhone": "Invalid.Please enter valid 10 digits!",
+            "validNotes": "Invalid.Please enter Notes of maximum 255 characters!"
+        }
+    },
+    "paymentForCE": {
+        "label": {
+            "skipPayment": "Skip Payment",
+            "confirmPayment": "Confirm Payment",
+            "downloadReceipt": "Download Receipt",
+            "makePayment": "Make Payment"
+        }
+    },
+    "captureShipping": {
+        "oneAddressBtn": "Ship all to one address",
+        "unit": {
+            "recurringCharge": "Per Month",
+            "oneTimeCharge": "One Time"
+        },
+        "btn": {
+            "next": "Next",
+            "addShipping": "Add Shipping Details",
+            "editShipping": "Edit Shipping Details",
+            "skipShipping": "Skip Shipping"
+        }
+    },
+    "customer-profile-view": {
+        "label": {
+            "header":"Customer Profile",
+            "headername": "Name & Address",
+            "headersegment": "Category & Segment",
+            "headerContact": "Contact Details",
+            "headerCusType": "Customer Type",
+            "name":"Name",
+            "cusName":"Customer Name:",
+            "address":"Address",
+            "Category":"Category",
+            "Segment":"Segment",
+            "Type":"Type",
+            "Subtype":"Sub-type"
+        },
+        "btn": {
+            "viewMore" : "View More",
+            "back": "Back"
+        }
+    },
+    "CommonAddress": {
+        "form": {
+            "addressLine1": {
+                "label": "Address Line 1",
+                "error": "Address Line 1 is required!"
+            },
+            "addressLine2": {
+                "label": "Address Line 2",
+                "error": "Address Line 2 is required!"
+            },
+            "addressLine3": {
+                "label": "Address Line 3",
+                "error": "Address Line 3 is required!"
+            },
+            "city": {
+                "label": "City",
+                "error": "City is required!"
+            },
+            "state": {
+                "label": "State",
+                "error": "State is required!"
+            },
+            "country": {
+                "label": "Country",
+                "error": "Country is required!"
+            },
+            "pincode": {
+                "label": "Pincode",
+                "error": "Pincode is required!"
+            },
+            "btn": {
+                "back": "Back",
+                "create": "Create Customer",
+                "checkAVL": "Check Availability"
+            }
+        },
+        "message": {
+            "notFound": "No matching record found!!!"
+        }
+    },
+    "contactsList": {
+        "label": {
+            "searchContacts": "Search Contacts"
+        },
+        "btn": {
+            "allContact": "All Contact",
+            "billingContact": "Billing Contact",
+            "shippingContact": "Shipping Contact"
+        },
+        "table": {
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "action": "Action"
+        },
+        "dialog": {
+            "label": "Add Contact"
+        }
+    },
+    "customerAddress": {
+        "header": "Address Details",
+        "custAddressProfile": "Basic Details",
+        "addressAlreadyCaptured": "Address already captured.You can enter a new address or continue with this."
+    },
+    "search-customer": {
+        "label": {
+            "header": " Search Results"
+        },
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "UploadDocument": {
+        "header": "Upload Documents",
+        "displayMessage": "",
+        "info":"Upload any 1 or 2 document types for each category.",
+        "mandatoryheader":"Documents (Mandatory)",
+        "optionalheader" : "Documents (Optional)",
+        "nodata" : "Data is not available!",
+        "message":{
+            "maxuploaded":"Maximum files uploaded.",
+            "noAttr" : "No Attributes added.",
+            "nocomments" : "No Comments added."
+        },
+        "label": {
+            "doccategory": "Document Category",
+            "doctype": "Document Type",
+            "docname": "Document Name",
+            "filesize": "File Size",
+            "uploaddate": "Upload Date",
+            "action": "Actions",
+            "information": "Information",
+            "comments": "Comments",
+            "category": "Category",
+            "attribute": "Attributes",
+            "createCustomer": "Create Customer",
+            "back": "Back"
+        },
+        "btn": {
+            "cancel": "Cancel",
+            "delete":"Delete",
+            "upload": "Upload",
+            "add": "Add",
+            "chooseFile": "Choose File"
+        }
+    },
+    "accountContact": {
+        "btn": {
+            "createAccount": "Create Account",
+            "back": "Back"
+        }
+    },
+    "customer-individual-details": {
+        "lookup-header": "Customer Lookup",
+        "name": "Name",
+        "header": "Basic Details",
+        "title": "Title",
+        "firstname": "First Name",
+        "middlename": "Middle Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "mobile": "Mobile Number",
+        "dob": "Date Of Birth",
+        "id": "Personal ID",
+        "address": "Address",
+        "company": "Company",
+        "job-title": "Job Title",
+        "lookupHeader": "Search for customer,account,subscriber or order..",
+        "btn": {
+            "continue": "Continue to Capture Address",
+            "back": "Back",
+            "credit-check": "Credit Check",
+            "lookup-btn": "New Customer"
+        },
+        "message": {
+            "firstname": "First Name is required!",
+            "dob": "Date Of Birth Should not be below 23 year",
+            "lastname": "Last Name is required!",
+            "email": "Email is required!",
+            "mobile": "Mobile number should be max 10 digit!",
+            "mobile1": " Mobile number is required!",
+            "mobileNoValid": "Invalid.Please enter valid 10 digits Mobile Number!",
+            "ValidInput": "Invalid.Please enter only alphabets!",
+            "address": "Address is required!",
+            "company": "Company is required!",
+            "jobTitle": "Job Title is required!",
+            "ValidEmail": "Invalid.Please enter valid email, Max length: 40!",
+            "ValidAddress": "Invalid.Please enter valid Address!"
+        }
+    },
+    "customer-profile-details": {
+        "header": "Profile Details",
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "customer-confirm-dialog": {
+        "header": "Do u wish to procceed with selected customer?"
+    },
+    "customer-additional-details": {
+        "header": "Additional Details"
+    },
+    "customer-list": {
+        "header": "Select Customer",
+        "result-label": "Matching results",
+        "status": "Status",
+        "type": "Type",
+        "mobile": "Mobile",
+        "email": "E-mail",
+        "id": "Customer ID",
+        "name": "Name",
+        "view": "View",
+        "action": "Action"
+    },
+    "customer-org": {
+        "label": {
+            "org-name": "Organization Name",
+            "org-short": "Organization Short",
+            "tin": "TIN"
+        },
+        "message": {
+            "org-name": "Organization Name is required!",
+            "org-short": "Organization Short Code is required!",
+            "tin1": "Tin is required!",
+            "tin": "Tin should be max 10 digit!"
+        }
+    },
+    "customer-profile": {
+        "label": {
+            "header": "Customer",
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address"
+        }
+    },
+    "customer-sub-products": {
+        "label": {
+            "Service-Details": "Service Details",
+            "account": "Account",
+            "Service-no": "Service Number"
+        },
+        "button": {
+            "add": "Add New Product"
+        }
+    },
+    "customer-type": {
+        "label": {
+            "header": "Select Customer Type",
+            "add-inidividual": "Add Individual",
+            "add-org": "Add Organization",
+            "lookup": "Look up & Create"
+        }
+    },
+    "create-account-cus": {
+        "cus-label": "create-customer works!",
+        "account-label": "create-account works!"
+    },
+    "view-contact": {
+        "header": "View Contact"
+    },
+    "event-view-simple-delete":{
+      
+            "heading" : "Deleting Appointment !",
+            "content" : "Do you want to delete the appointment?",
+            "button":{
+                "yes":"Yes",
+                "no":"No"
+            }
+        
+    },
+    "event-view-simple": {
+        "previewHeader":"Appointment Details",
+        "label": {
+            "description": "Description",
+            "title": "Title",
+            "date": "Date",
+            "location": "Location",
+            "notes": "Special instructions",
+            "mobileNumber": "Mobile Number",
+            "email": "E-mail"
+        },
+        "patternValidatiors":{
+            "titlePattern": "(?! )[a-zA-Z0-9 ]{1,30}",
+            "mobilePattern": "^[0-9]{10}$",
+            "notesPattern": "^.{1,50}$"          
+        },
+        "button": {
+            "add": "Add Appointment",
+            "skip": "Skip & Proceed"
+        },
+        "message": {
+            "addAppointment": "Add an appointment to proceed ",
+            "validDate": "Please enter valid date.",
+            "description": "Description is required!",
+            "validDescription": "Invalid.Please enter valid Description of maximum 30 characters!",
+            "msg1": "Select one of the available slots.",
+            "msg2": " No slots available on Selected Date. Please select another date.",
+            "msg3": "Please select Date for appointment.",
+            "msg4": "Please select available slot for appointment.",
+            "tin1": "Tin is required!",
+            "tin": "Tin should be max 10 digit!",
+            "title": "Title is required!",
+            "validTitle": "Invalid.Please enter valid Title of maximum 15 characters!",
+            "notes": "Special instructions is required!",
+            "validNotes": "Invalid.Please enter Special instructions of maximum 50 characters!",
+            "mobile": " Mobile number is required!",
+            "ValidmobileNo": "Mobile number should be max 10 digits!",
+            "free":"free",
+            "pay":"pay",
+            "email": "E-mail is required!" 
+        }
+    },
+    "dashboardLanding": {
+        "label": {
+            "mainHeading": "View all your data and track performance",
+            "subHead": "Search for customer, account, subscriber or order"
+        }
+    },
+    "changePackageReview": {
+        "label": {
+            "heading": "Change Package Review",
+            "currentplan": "Current Plan",
+            "validity": "Validity: 30 days",
+            "tax": "M.R.P incl. Taxes",
+            "newplan": "New Plan",
+            "rc": "Recurring: ",
+            "nrc": "Upfront: ",
+            "rccost": "New Plan's Recurring cost(incl. Taxes)",
+            "nrccost": "New Plan's Upfront cost(incl. Taxes)",
+            "paymentmessage": "To Pay",
+            "total": "Total"
+        },
+        "btn": {
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+        }
+    },
+    "serviceSelection": {
+        "label": {
+            "heading": "New Registration ",
+            "portin": "Port-in",
+            "newSubscription": "Buy New Service",
+            "ultimatedata": "Ultimate Data",
+            "upto": "Up to",
+            "gb": "1GBPS",
+            "speed": "Speed",
+            "planstarts": "Plans starting from",
+            "price": "₹ 499"
+        },
+        "btn": {
+            "submit": "Buy Now",
+            "back": "Back"
+        }
+    },
+    "shippingDeliveryOption": {
+        "label": {
+            "title": "Additional Shipping Details"
+        }
+    },
+    "instalments": {
+        "label": {
+            "currency": "₹",
+            "term": "Term",
+            "summaryTitle":"Instalment Summary",
+            "stepperLabel":"Instalment Details",
+            "upfrontPayment": "Upfront Amount",
+            "monthlyInstalment": "Monthly Installment",
+            "lastInstalment": "Last Installment",
+            "totalCost": "",
+            "installmentDetails": "Installment Details",
+            "outrightPay": "Outright payment",
+            "installment": "Installment"
+        },
+        "btn": {
+            "next": "Continue"
+        }
+    },
+    "contractMsg": {
+        "label": {
+            "retain": "Retain the contract",
+            "renew": "Renew the contract",
+            "terminate": "Terminate contract",
+            "retainMsg": "Are you sure want to retain the contract?",
+            "renewMsg": "Are you sure want to renew the contract?",
+            "terminateMsg": "Are you sure want to terminate the contract?"
+        },
+        "btn":{
+            "cancel":"Cancel",
+            "retain":"Retain",
+            "renew":"Renew",
+            "terminate":"Terminate"
+        }
+    },
+    "feasibilityCheckFail": {
+        "errorDisplayMessageCE": [
+            "The feasibility check failed."
+        ],
+        "errorMessage": [
+            "There seems to be a problem in performing Feasibility check.",
+            "You can try slecting another service."
+        ]
+    },
+    "shippingDetailsCapture": {
+        "label": {
+            "street1": "Street1",
+            "street2": "Street2",
+            "street3": "Street3",
+            "city": "City",
+            "stateOfProvince": "State of Province",
+            "postCode": "Post Code",
+            "relatedPartyName": "Related Party Name",
+            "shipmentDetails": " Shippment of All Items",
+            "shipmentOf": " Shippment of "
+        },
+        "checkbox": {
+            "address": "Select the address"
+        },
+        "btn": {
+            "newAddress": "Add New Address",
+            "next": "Next"
+        },
+        "placeholder": "Search Address"
+    },
+    "shippingDetailsSummary": {
+        "label": {
+            "shippingDetails": "Shipping Details",
+            "shippingOf": "Shippment of",
+            "shipping1": "Shipping",
+            "quantity": "Quantity",
+            "shippingSummaryTitle": "Shipping Summary Details"
+        },
+        "btn": {
+            "next": "Continue",
+            "back": "Shipping Capture "
+        }
+    },
+    "serviceOffers": {
+        "heading": "Offers",
+        "headingAddon": "Addons",
+        "headingChild": "Child Offers",
+        "heading2": "Service",
+        "changepackage": "Change Package Options for ",
+        "CSA": "Change Service Address - Offers ",
+        "noonetimecharge": "No One Time Charge",
+        "noUpfrontCharge": "No Upfront Charge",
+        "nomonthlycharge": "No Monthly Charge",
+        "permonthtext": "Per Month",
+        "upfront": "Upfront",
+        "onetimetext": "One Time",
+        "monthlycharge":"Monthly",
+        "onetimecharge":"One Time",
+        "btn": {
+            "back": "Back"
+        }
+    },
+    "cartmessage": {
+        "packagebtn": " Select Another Primary",
+        "servicebtn": " Select Another Service",
+        "childbtn": " Add Child Line",
+        "proceed": "Proceed"
+    },
+    "deleteUploadDoc":{
+        "label":{
+            "delete": "Delete",
+            "deleteMsg": "Do you want to delete the document?"
+        }
+    },
+    "orderView": {
+        "label": {
+            "uploadDoc": "Upload Documents"
+        },
+        "prerequisites": {
+            "ACTIVE": "OPEN",
+            "NEW": "OPEN",
+            "HOLD": "OPEN",
+            "CANCELLED": "OPEN",
+            "COMPLETED": "SUCCESS"
+        }
+    },
+    "productList": {
+        "btn": {
+            "addtocart": "Add To Cart"
+        }
+    },
+    "submitOrderStatus": {
+        "heading" : "Success!",
+        "label": {
+            "p1": "Order Submitted Successfully.",
+            "p2": "The Order Number for tracking is ",
+            "p3": "Expected Order completion date is "
+        },
+        "btn": {
+            "order": "Track Order"
+        }
+    },
+    "leadcreation": {
+        "heading" : "Success!",
+        "label": {
+            "p1": "Lead captured successfully."
+        },
+        "btn": {
+            "home": "Home"
+        }
+    },
+    "landing-body": {
+        "placeholder": {
+            "search": "Search for customer"
+        }
+    },
+    "proceed-to-order": {
+        "btn": {
+            "Configure": "Configure"
+        },
+        "label": {
+            "No Results": "Validation Failed",
+            "Valid": "Checked and Valid",
+            "one": "One time",
+            "preview": "Order Preview"
+        }
+    },
+    "product-configure-confirmadd": {
+        "label": {
+            "done": "is already available in cart",
+            "Addwith": "Click Add with Custom Name or Replace",
+            "Enter": "Enter Custom Name"
+        },
+        "btn": {
+            "Add": "Add",
+            "Replace": "Replace"
+        }
+    },
+    "confirm-delete": {
+        "label": {
+            "message": "Are you sure want to delete ",
+            "message1": "? This action cannot be undone!",
+            "title": "Remove Package/Addon",
+            "Addwith": "Click Add with Custom Name or Replace",
+            "Enter": "Enter Custom Name"
+        },
+        "btn": {
+            "ok": "Yes",
+            "cancel": "Cancel",
+            "no" : "No"
+        }
+    },
+    "product-configure-edit-selection": {
+        "label": {
+            "bundle": "BUNDLE",
+            "selected": "SELECTED"
+        },
+        "btn": {
+            "done": "Selected",
+            "select": "Select",
+            "update": "Update"
+        }
+    },
+    "service-availability-check": {
+        "label": {
+            "service": "Service",
+            "header": "See what products are available to you",
+            "content": "Enter your address to view products and pricing available in your area",
+            "addressCheck": "Address already captured.You can enter a new address or continue with this.",
+            "address": "Address"
+        },
+        "btn": {
+            "back": "Back",
+            "edit": "Edit",
+            "checkAvailability": "Check Availability"
+        }
+    },
+    "csa-address-capture": {
+        "label": {
+            "back": "Back",
+            "headercsa": "Enter your address to view products and pricing available in your area",
+            "headeraddresschange": "Enter your new address",
+            "title":"Change Service Address"
+        },
+        "btn": {
+            "csa": "Proceed",
+            "noncsa": "Proceed"
+        }
+    },
+    "paymentReceipt": {
+        "label": {
+            "transactionfailed": "Transaction Failed!!",
+            "transactionsuccesfull":"Payment Successful",
+            "transactionDetails": "Transaction Details",
+            "customerName": "Customer Name",
+            "transactionAmount": "Transaction Amount",
+            "paymentUniqueId": "Payment Unique Id",
+            "paymentMethod": "Payment Method",
+            "paymentReference": "Payment Reference",
+            "paymentDate": "Payment Date",
+            "paymentstatus": "Payment status",
+            "submit": "Submit Order",
+            "currency": "₹"
+        },
+        "btn": {
+            "tryagain": "Try Again",
+            "skip": "Skip & Proceed"
+        },
+        "dialog": {
+            "error": "Error while performing the transaction. Do u wish to Proceed?"
+        }
+    },
+    "product-configure": {
+        "btn": {
+            "back": "Back",
+            "preview": "Preview",
+            "proceed": "Proceed",
+            "show": "Show Revised Price",
+            "filter": "Filter",
+            "All": "All",
+            "selecteditems": "Selected Items",
+            "check": "Check",
+            "select": "Select",
+            "selected": "Selected"
+        },
+        "label": {
+            "preview": "Preview Selection",
+            "bundle": "BUNDLE",
+            "edit": "Edit",
+            "filter": "Filter",
+            "selected": "Selected Items",
+            "showhere": "Show",
+            "of": "of",
+            "expanall": "Expand All", 
+            "product":"Product: ",
+            "attribute":" Attribute(s): "         
+        },
+        "node_action": {
+            "bysystem": "Auto added",
+            "byuser": "Added",
+            "browsed": "Browsed",
+            "added": "Added",
+            "removed": "Removed",
+            "retained": "Retained",
+            "suspended": "Suspended"
+        },
+        "configure-content": {
+            "preview": "Preview Selection",
+            "configure": "Configuration",
+            "closepreview": "Close Preview"
+        }
+
+    },
+    "product-configure-item": {
+        "btn": {
+            "select": "Select",
+            "selected": "Selected"
+        }
+    },
+    "cart-item-configure": {
+        
+        "view": {
+            "compact": "Compact View",
+            "detailed": "Detailed View"
+        }
+    },
+    "dropdown.currency": {
+        "euro": "EURO",
+        "usd": "USD",
+        "inr": "INR",
+        "yen": "YEN"
+    },
+    "product-configure-quantity-confirm": {
+        "label": {
+            "present": " You already have ",
+            "present1": "  in your cart",
+            "Add": "Do you want to apply the same configuration for this new offer you are buying?",
+            "configure": "No",
+            "Increase": "Yes"
+        }
+    },
+    "nav-bar-search": {
+        "label": {
+            "header": "HOBS Order"
+        }
+    },
+    "product-config-item-dtls": {
+        "label": {
+            "required": "Required",
+            "Not selected": "Not selected"
+        }
+    },
+    "product-configure-tab": {
+        "btn": {
+            "back": "View All Products",
+            "proceed": "Add To Cart",
+            "show": "Show Revised Price"
+        },
+        "label": {
+            "configure": "Configure Selected Service",
+            "items": "Selected Items",
+            "show": "Show",
+            "product":"Product: ",
+            "attribute":" Attribute(s): "
+        }
+    },
+    "product-list": {
+        "btn": {
+            "filter": "Filter",
+            "add": "Add To Cart"
+        },
+        "label": {
+            "onetime": "One Time",
+            "permonth": "per Month"
+        }
+    },
+    "order-type": {
+        "label": {
+            "changePackage": "CHANGE PACKAGE",
+            "portin":"Portin",
+            "addorremove": "ADD OR REMOVE",
+            "csa":"Change Service Address",
+            "new": "NEW",
+            "preToPostLabel": "PREPAID To POSTPAID"
+        }
+    },
+    "serviceAttributes": {
+        "label": {
+            "heading": "Service Attributes ",
+            "content": "We need some more details so we can show you the best offers"
+        },
+        "btn": {
+            "submit": "PROCEED",
+            "back": "Back"
+        }
+    },
+    "captureBasicDetails": {
+        "label": {
+            "heading": "Capture Basic Details ",
+            "content": "We need some basic details to proceed further."
+        },
+        "btn": {
+            "submit": "PROCEED",
+            "back": "Back"
+        }
+    },
+    "leadCreation": {
+        "label": {
+            "heading": "Lead Creation ",
+            "headContent": "The selected service is not available currently in the address provided!!",
+            "content": "Please help us with some details to understand your need better"
+        },
+        "btn": {
+            "submit": "SAVE"
+        }
+    },
+    "nav": {
+        "appTitle": "HOBS CRM Lite",
+        "menus": {
+            "home": "Home",
+            "themes": "Themes",
+            "applications": "Apps",
+            "language": "Language",
+            "profile": "My Profile",
+            "account": "Account",
+            "english": "English",
+            "french": "French",
+            "logout": "Logout"
+        }
+    },
+    "validationMsg": {
+        "required": {},
+        "pattern": {}
+    },
+    "msg": {
+        "noContactFound": "There are no contacts!",
+        "nomatchingparty": "No matching party",
+        "deleteMsg": "Are you sure you want to delete this contact? This action cannot be undone!"
+    },
+    "notify": {
+        "newTheme": {
+            "success": "New Theme created",
+            "error": "Error while creating theme"
+        }
+    },
+    "customer360": {
+        "customer": {
+            "address": "Customer address",
+            "complaintsopen": "Open complaints",
+            "type": "Customer type",
+            "interactionsdifficult": "Past difficult interactions",
+            "churnrisk": "Churn risk",
+            "lifetime": "Customer lifetime",
+            "lifetimevalue": "Lifetime value",
+            "socialprofile": "Social profile",
+            "propensityupsell": "Propensity to upsell"
+        },
+        "widgets": {
+            "accounts": "Accounts",
+            "services": "Services",
+            "accountdetails": "Account Details",
+            "customerexperience": "Customer Experience",
+            "customerhistory": "Customer History",
+            "socialfeed": "Social Feed"
+        },
+        "accountdetails": {
+            "currentplan": "Current plan",
+            "lastbillamount": "Last bill amount",
+            "totalbilldue": "Total bill due",
+            "nextbillrundue": "Next bill run due",
+            "appointmentsdue": "Appointments due",
+            "collectionsactiondue": "Collections action due"
+        },
+        "customerexperience": {
+            "complaints2months": "Complaints in past 2 months",
+            "lastinteractionabout": "Last interaction about",
+            "lastinteractiontime": "Last interaction time",
+            "avgcalltoccpm": "Avg. calls to CC per month",
+            "callssametopicpastmonth": "Calls on same topic in past month",
+            "totalorders": "Total orders",
+            "ordersinprogress": "Orders in progress",
+            "lastpostaboutcompany": "Last post about company",
+            "interestareas": "Interest areas"
+        },
+        "usage": {
+            "title": "Usage",
+            "used": "Used",
+            "available": "Available"
+        },
+        "modal": {
+            "notification": "Dues & Notifications",
+            "recommendations": "Recommendations",
+            "x": "×",
+            "close": "Close",
+            "viewBill": "View Bill",
+            "viewComplaint": "View Complaint"
+        }
+    },
+    "changepackage": {
+        "title": "Change Package",
+        "validationError": "not eligible for proceeding with Order",
+        "validationSuccess": "all eligible for proceeding with Order",
+        "validErrorLabel": "In-flight order",
+        "validSuccessLabel": "eligible"
+    },
+    "currentplan": {
+        "title": "Current Plan"
+    },
+    "plandetails": {
+        "title": "Plan Details"
+    },
+    "recommendedplans": {
+        "title": "Recommended Plans"
+    },
+    "allplans": {
+        "title": "All Plans"
+    },
+    "compareplan": {
+        "title": "Compare Plan"
+    },
+    "privacypolicy": {
+        "link": "Privacy policy",
+        "title": "HOBS Privacy Policy for the Internet",
+        "content": "<i><b>TCS HOSTED OSS BSS (HOB)</b></i> is sensitive to privacy issues on the Internet. We believe it is important you know how we treat the information we receive from you, on the Internet.</p><br><p align='justify'>In general, you can visit <a href='http://www.tcs.com/industries/telecom/hosted-oss-bss/Pages/default.aspx' target='_blank'><font color='04BFFD'>http://www.tcs.com/industries/telecom/hosted-oss-bss/Pages/default.aspx</font></a> on the World Wide Web without telling us who you are or revealing any information about yourself. Our Web servers collect the domain names, not the e-mail addresses, of visitors. This information is aggregated to measure the number of visits, average time spent on the site, pages viewed, etc. HOBS uses this information to measure the use of our site and to improve the content of its site. Your accessing our site signifies your unconditional consent to allow the collection of your domain names.</p><br><p align='justify'>There are times, however, when we may need information from you, such as your name and address. When information is needed, we will try (but are not obligated) to let you know at the time of collection, how we will use the personal information. Usually, the personal information we collect is used only by us to respond to your inquiry, process an order or allow you to access specific account information. Occasionally, we may make the e-mail addresses, of those who provide information, available to other reputable organizations whose products or services we think you may find interesting. In these cases, you will be offered an opportunity to limit the access of your information. In case we do not receive any response from you to limit the access of your information, it shall be deemed that you consent to such distribution of your information as mentioned above.</p><br><p align='justify'>If you register with one of HOB business units, they may use this information to provide you with custom information about TCS’ offering in support of your business needs. A technology called cookies may be used to provide you with tailored information. A cookie is a tiny element of data that a web site can send to your browser, which may then be stored on your hard drive so we can recognize you when you return. You may set your browser to notify you when you receive a cookie. Registering with any HOB business unit online signifies your unconditional consent to receive such cookies.<br><br></p><p align='justify'>At times we conduct online surveys to better understand the needs and profiles of our visitors. When we conduct a survey, we will try (but are not obligated) to let you know how we will use the information at the time we collect information from you on the Internet.</p><br><p align='justify'>You recognize and understand that there is no compulsion on you to provide us with your personal information and any and all personal information provided by you to us is with your full consent, own volition and desire to provide such personal information. You also understand that we are under no obligation to verify the source from which the personal information about you is provided to us, and they are deemed to be provided by you, unless you demonstrate to us within a period of fifteen days from the date of providing of such information to us, to our satisfaction, that the information was provided to us without your free consent.</p><br><p align='justify'>HOB Website may contain links to other sites. While we try to link only to sites that share our high standards and respect for privacy, we are not responsible for the content or the privacy practices employed by other sites.</p>"
+    },
+    "labels": {
+        "account": "Account",
+        "subscription": "Subscription",
+        "ordereddate": "Ordered on",
+        "Invoces": "INVOICES",
+        "previousBalance": "Previous Balance",
+        "paymentReceived": "Payment Received",
+        "adjustment": "Adjustment",
+        "invoiceCharges": "Invoice Charges",
+        "tax": "Tax",
+        "totalToPay": "Total to Pay",
+        "invoiceAmount": "Amount",
+        "paymentMode": "Payment Mode",
+        "remarks": "Reason",
+        "invoiceNumber": "Invoice Number",
+        "currentDate": "Current Date",
+        "rescheduleDate": "Reschedule Date",
+        "reason": "Reason",
+        "adjustmentType": "Adjustment Type",
+        "description": "Description",
+        "billingAddress": "Billing Address",
+        "emailID": "Email ID",
+        "billingPreference": "Billing Preference",
+        "searchInvoices": "Search Invoices",
+        "adjSubType": "Adjustment Sub Type",
+        "adjCode": "Adjustment Code",
+        "adjMode": "Adjustment Mode",
+        "capturepayment": "Capture Payment",
+        "formConfigurator": "Form Configurator",
+        "journeyTasksettings": "Journey Task settings",
+        "apiHeaders": "API Headers",
+        "applicationSettings": "Application Settings",
+        "formName": "Form Name",
+        "formIdentifier": "Form Identifier",
+        "appName": "Application Name",
+        "jsonConfig": "Json Configuration",
+        "addNew": "Add New",
+        "appSetting": "Application Settings",
+        "formConfig": "Form Configuration",
+        "foConfig": "Front Office - Configuration",
+        "appSetting-new": "Application Settings - New",
+        "appSetting-view-Edit": "Application Settings - View/Edit ",
+        "form-Config-new": "Form Configuration - New",
+        "form-config-view-edit": "Form Configuration - View/Edit",
+        "delete": "Delete",
+        "preview": "Preview",
+        "back": "Back",
+        "formPreview": "Form Preview"
+    },
+    "card": {
+        "users": {
+            "error": "Users    :   NA",
+            "label": "Users",
+            "loading": "Loading Users"
+        },
+        "orders": {
+            "error": "Orders    :  NA",
+            "label": "Orders",
+            "loading": "Loading Orders"
+        },
+        "service": {
+            "error": "Service Groups   :  NA",
+            "label": "Service Groups",
+            "loading": "Loading Service Groups"
+        },
+        "subscriptions": {
+            "error": "Subscriptions  : NA",
+            "label": "Subscriptions",
+            "loading": "Loading Subscriptions"
+        },
+        "payers": {
+            "error": "Payers  :  NA    ",
+            "label": "Payers",
+            "loading": "Loading Payers"
+        }
+    },
+    "subscriberapp": {
+        "alertmsg": {
+            "title": "Info",
+            "relatedSubError": "No Related Subscriber found",
+            "idetifierSubError": "No subscriber identifier mapped to the subscriber",
+            "productsSubError": "No products available",
+            "historySubError": "No history records found",
+            "pendingOrdersSubError": "No pending orders",
+            "subscriberProfileError": "No Subsciber Profile Details found",
+            "activeInstallmentNoDataTitle": "No Data Found",
+            "activeInstallmentNoDataError": "Currently there is no active installment avaialble for selected Subcription.",
+            "activeInstallmentServiceTitle": "ERROR",
+            "activeInstallmentServiceErrorMsg": "Something went wrong. We are checking. Please check after some time.",
+            "preCloseInstallmentNextMonthBill": "Request has been submitted for Next Month Bill Payment.",
+            "tryAgainLater": "Please check after some time.",
+            "preCloseInstallmentNextMonthBillError": "There seems to be a problem in proceeding the request."
+            
+            
+        },
+        "label":{
+            "requestedID": "The Request ID is : "
+         },
+        "errorStatusCode":{
+             "404":"404",
+             "9999":"9999"
+        }
+    },
+    "contactapp": {
+        "alertmsg": {
+            "title": "Info",
+            "titleSuccess": "Success",
+            "contactTypeSelection": "To add a new contact, choose a role type",
+            "multipleContact": "not allowed to create multiple contacts",
+            "createContact":"Contact Created Successfully",
+            "editContact":"Contact Updated Successfully",
+            "deleteContact":"Contact Deleted Successfully",
+            "associationSelection":"Select Association ID to Role",
+            "allPartyRoleAssociated": "All Role is assigned with Contact",
+            "idSelection":"Please Select Association ID to proceed"
+            
+        }
+    },
+    "dashboardapp": {
+        "noDataInTable": "Sorry, we couldn't find any matches ",
+        "alertmsg": {
+            "404": "For aggregation no matching data found",
+            "401": "For aggregation you are not authorized to access the information",
+            "500": "For aggregation unable to retrieve information because of technical issues"
+
+        },
+        "alertmsgForTableResp" : {
+            "404": "No Records Found",
+            "401": "you are not authorized to access the information",
+            "500": "unable to retrieve information because of technical issues"
+        },
+        "alertmsgForFilteredTableResp" : {
+            "404": "No records found for orderid",
+            "401": "You are not authorized to access the information",
+            "500": "Unable to retrieve information because of technical issues"
+        },
+        "alertDateRange" : "Technical error: unable to fetch Days dropdown"
+    },
+    "addonError":{
+        "msg" :"No Addon Available For Selected Offer"
+    },
+    "cus-acc-details":{
+        "cuslabel" :"Customer",
+        "acclabel" :"Account",
+        "ordlabel" :"Order"
+    },
+    "each-form-field": {
+        "choosefileDesc": "Allowed file formats:",
+        "fileSizeLimit": "Allowed file size: Max 2 MB"
+    },
+    "orderDetailResult": {
+        "label": {
+            "ordersPlaced": "Orders Placed",
+            "searchOrders": "Search Orders"
+        }
+    },
+    "feasibility-results":{
+        "header": "Feasibility Results",
+        "subheading": "Select a address, so we can show you the best offers"
+    },
+    "uploadDocumentPopup-CustomerCreation/Preview":{
+        "header": "Upload Documents"
+    },
+    "uploadDocumentPopup-OrderView":{
+        "header": "Upload Documents"
+    },
+
+    "subscriberIdentifier":{
+        "table":{
+            "id":"Identiefier",
+            "name":"Description",
+            "type":"Type",
+            "add_id":"Identiefier",
+            "add_name":"Description",
+            "add_type":"Type",
+           "viewSubscribtionLink": "VIEW SUBSCRIPTION"
+        }
+    },
+
+    "orderSummaryapp" : {
+        "label":{
+            "orderDetails" : "Order Details"
+        },
+        "orderLineView": {
+            "customerId": "Customer ID",
+            "customerSegment": "Customer Segment",
+            "order": "Order",
+            "orderStatus": "Order Status",
+            "orderPlacedOn": "Order Placed On",
+            "orderPlacedBy": "Order Placed By",
+            "orderLineStatus": "Order Line Status",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "dueBy": "Due By",
+            "channel": "Channel",
+            "customerName": "Customer Name"
+        },
+        "orderProfile": {
+            "orderLineStatus": "Order Line Status",
+            "createdBy": "Created By",
+            "createdDate": "Created Date"
+        }
+    },
+    "quickOrderOnclickCartDialog" : {
+        "heading" : "Warning",
+        "content" : "The journey will be abandoned, and all information captured will be lost!",
+        "question" : "Do you want to proceed?",
+        "button":{
+            "yes":"Yes",
+            "no":"No"
+        }
+    },
+    
+    "customer360Dashboard":{
+      "title":{
+           "all":"All",
+           "recent":"Recent",
+           "lastorder":"Last Order",
+           "orderValue":"Order Value",
+           "orderPlaceOn":"Order Placed On",
+           "orderValueHeader":"Order Value",
+           "orderSummaryHeader":"Orders Summary (All)",
+           "viewOrder":"View Order",
+           "viewAllOrders":"View All Orders",
+           "customerTimeLineHeader":"Customer TimeLine",
+           "ComplaintsNewClosed":" New Vs Closed",
+           "ComplaintsAllTicketsCountByCategory":"All Tickets Count By Category"
+
+          },
+          "error":{
+           "NoTimeLine":"Currently Timelines are not available",
+           "NODetailsAvailable":"No Data Available",
+           "lastOrderError":"No Data Available",
+           "lastOrderValueError":"No Data Available",
+           "lastOrderPlaceOnError":"No Data Available",
+           "lastOrderSummary":"No Data Available",
+           "complaintsTicketsNewVSClosedError":"No Data Available",
+           "complaintsTicketCategoryDetailsErr":"No Data Available"
+
+          }
+      
+    },
+
+    "changePayerapp": {
+        "submitDialogue": {
+            "heading" : "Success!",
+            "orderSubmittedText": "Batch Order successfully placed for Change Payer",
+            "subscriptionSelected": "Subscriptions selected",
+            "trackOrder": "Track Order",
+            "viewSubList": "View Subscriber List"
+        }
+    }
+    
+}

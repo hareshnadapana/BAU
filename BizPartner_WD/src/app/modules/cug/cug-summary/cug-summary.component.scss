@@ -1,0 +1,56 @@
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-celcom-white-alternate {
+  background-color: white;
+  color: #009BDF;
+  border: 1px solid #009BDF;
+
+  &:hover {
+    background-color: rgba(0, 155, 223, 1);
+    color: white;
+  }
+}
+
+.button-styling {
+  margin-left: 1rem;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table-styling {
+  box-shadow: 0 .125rem .3125rem rgba(0,0,0,.15);
+  display: block !important;
+  overflow-x: auto;
+}
+
+.mat-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  color: white !important;
+  background-color: #164396;
+  min-width: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mat-header-cell {
+    padding: 0 10px;
+  }
+
+  .mat-cell {
+    padding: 0 10px;
+  }
+}

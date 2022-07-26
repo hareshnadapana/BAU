@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    }
+    input[type=checkbox] {
+      vertical-align: middle;
+      position: relative;
+      bottom: 1px;
+    }
+    </style>
+ </head>
+ <body>
+  <form>
+    <!-- Header -->
+    <!-- <div>
+      <button mat-button type="button" (click)="back()" color="primary" id="back" class="ml-4 mt-3">
+        <mat-icon matPrefix svgIcon="heroicons_outline:arrow-narrow-left"></mat-icon>
+        <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+      </button>
+    </div> -->
+
+    <div class="flex-col sm:flex-row flex-0 sm:items-center sm:justify-between bg-default dark:bg-transparent">
+      <div class="flex-1 justify-between heads" >
+        <div class="flex-col justify-start items-start headcol" >
+          <div class="flex-1" style="align-items: center; display:flex;">
+            <div class="text-3xl md:text-4xl font-extrabold">
+              <button mat-icon-button type="button" (click)="back()" color="primary" id="back">
+                <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+              </button>
+              Stock Inventory
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-end">
+          <div class="items-center justify-end w-full title">
+            <form class="" [formGroup]="dropdownForm">
+            <div class="dropdown-custom" style="margin-bottom: -16px;">
+              <mat-form-field  floatLabel="always" class="w-100 bg-card fullwidth" style="margin-right: 24px; width: 176px !important" hideRequiredMarker>
+                  <mat-select [id]="dropdownList[0].title" formControlName="search" [placeholder]="dropdownList[0].title" (selectionChange)="idSelect($event.value)" required>
+                  <mat-option *ngFor="let op of dropdownList[0].enum" [value]="op.value">
+                    {{op.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            </form>
+            <div class="textbox-custom searchbox">
+              <input [disabled]="searchFieldDisabled" matInput type="text" class="form-control input-content" placeholder="Search" [formControl]="inventorySearch" casetransform style="padding-left:10%;"/>
+              <button [disabled]="searchFieldDisabled" type="submit" (click)="onSearch()" style="margin-right: 10px; margin-left: 5px;">
+                <img src="assets/images/logo/search_icon.svg" style="max-height: 20px; width: unset;" >
+              </button>
+            </div>
+            <button style="margin-left: 15px;" *ngIf="showExportBtn" type="button" mat-icon-button (click)="exportExcel()">
+              <img src="assets/images/logo/icon_export_excel.svg" width="100%" height="75%" alt="img">
+          </button>
+            <div class="boxestwo">
+              <button [disabled]="advanceSearchFieldDisabled" #toggleButton class="filterbox" (click)="isBubble = !isBubble">
+                <img src="assets/images/logo/filter_icon.svg" width="100%" height="75%" alt="img">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+    
+  <form>
+    <div *ngIf="isBubble" style="display: flex; justify-content: flex-end;" #menu>
+      <div class="bubble" style="margin-right: 16px;">
+        <div class="flex-none rounded-2xl shadow overflow-y-auto bg-card" cdkScrollable>
+    
+                <div class="row" class="filterfield" >
+                  <div class="column mr-2">
+      
+                    <div class="textbox-custom">
+                      <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                        <mat-label class="required-marker">Material Code</mat-label>
+                        <input matInput type="text" class="form-control input-content" [formControl]="materialCodeSearch" placeholder="Material Code" casetransform />
+                      </mat-form-field>
+                    </div>
+
+                    <div class="textbox-custom">
+                      <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                        <mat-label class="required-marker">Brand</mat-label>
+                        <input matInput type="text" class="form-control input-content" [formControl]="brandSearch" placeholder="Brand" casetransform />
+                      </mat-form-field>
+                    </div>
+                  </div>
+      
+                  <div class="columntwo ml-2">
+                    <div class="textbox-custom">
+                      <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                        <mat-label class="required-marker">Item Name</mat-label>
+                        <input matInput type="text" class="form-control input-content" [formControl]="itemNameSearch" placeholder="Item Name" casetransform />
+                      </mat-form-field>
+                    </div>
+      
+                    <div class="textbox-custom">
+                      <mat-form-field  floatLabel="always" class="w-100 bg-card  resize" hideRequiredMarker>
+                        <mat-label class="required-marker">Category</mat-label>
+                        <input matInput type="text" class="form-control input-content" [formControl]="categorySearch" placeholder="Category" casetransform />
+                      </mat-form-field>
+                    </div>
+                </div>
+              </div>
+            <div class="flex items-center justify-end w-full" style="align-items: center; display:flex; margin-bottom: 30px;">
+              <button style="width: 9vw; margin-left: 24px; white-space:pre" (click)="clearSearch()" mat-flat-button color="cancel">
+                Clear
+              </button>
+      
+              <button style="width: 9vw; margin-left: 24px; margin-right: 24px; white-space:pre" (click)="applyAdvanceSearch()" mat-flat-button color="celcom-blue">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="flex-none overflow-y-auto mobileblock" cdkScrollable style="margin-right: 16px; margin-left: 16px;">
+      <div class="h-full  min-h-full max-h-full ">
+           <div class="profile-box info-box work flex flex-col"  id="customer_contact" style="display: block !important;border:1px solid lightgrey; border-radius:8px; overflow: hidden">
+            <div *ngIf="dataSource!=null" >
+              <table mat-table [dataSource]="dataSource" style="width: 100%;justify-content: space-between;" class="docs-table"
+                  matSort fusePerfectScrollbar class="products-table ">
+                  <ng-container matColumnDef="materialcode">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Material Code
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.sapMaterialCode}} 
+                    </td>
+                  </ng-container>
+  
+                  <ng-container matColumnDef="itemname" >
+                      <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white;"> Item Name
+                      </th>
+                      <td mat-cell *matCellDef="let element" class="columnalign">
+                        {{element.deviceModelDesc}} 
+                      </td>
+                  </ng-container>
+  
+                  <ng-container matColumnDef="brand">
+                      <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Brand
+                      </th>
+                      <td mat-cell *matCellDef="let element" class="columnalign">
+                        {{element.manufacturerId}} 
+                      </td>
+                  </ng-container>
+  
+                  <ng-container matColumnDef="category">
+                      <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> Category </th>
+                      <td mat-cell *matCellDef="let element" class="columnalign">
+                        {{element.inventoryItemTypeId}}
+                      </td>
+                  </ng-container>
+  
+                  <ng-container matColumnDef="instock">
+                    <th mat-header-cell *matHeaderCellDef class="columnalign" style="background-color: darkblue; color: white"> In Stock </th>
+                    <td mat-cell *matCellDef="let element" class="columnalign">
+                      {{element.TotalAvailableQty}}
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedDocumentColumns;"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedDocumentColumns;">
+                  </tr>
+              </table>
+            </div>
+          </div>
+          
+          <mat-paginator #paginator [pageIndex]="0" class="flex items-center justify-end" style="background-color: transparent"
+              [pageSize]="25" [showFirstLastButtons]="true" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="pageChangeEvent($event)" style="background: none;">
+          </mat-paginator>
+
+        </div>
+    </div>
+  </form>
+ </body>
+</html>

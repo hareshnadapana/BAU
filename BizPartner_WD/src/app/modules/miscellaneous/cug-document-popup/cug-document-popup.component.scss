@@ -1,0 +1,158 @@
+
+.w-100 {
+  width: 100% !important;
+}
+
+:host ::ng-deep .mat-form-field-required-marker {
+  color: red !important;
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  color: red;
+  margin-bottom: 0.8rem;
+  margin-top: -0.4rem;
+  padding-left: 0.2rem;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+.myInput {
+  height: 50px !important;
+  padding: 10px !important;
+}
+
+.status-error{
+  color:#f44336;
+  font-size: 0.77rem;
+    margin-bottom: 0.8rem;
+    margin-top: -1rem;
+    padding-left: 0.2rem;
+   
+    font-weight: 600;
+}
+
+.status-info{
+ color:#72bb53;
+ font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    margin-top: -1.6rem;
+    padding-left: 0.2rem;
+   
+    font-weight: 600;
+}
+
+
+// .upload-file{
+//   // background-image: url(attach_icon.svg);
+//   background-repeat: no-repeat;
+//   color: #fff;
+//   background-position: 15% center !important;
+//   border-radius: 25px !important;
+//   height: 40px !important;
+//   border: 1px solid #164394;
+// }
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.flex-container>button{
+  height: 40px !important;
+}
+
+.whiteBg{
+  background: #ffffff !important;
+}
+.celcomBlueBg{
+  background: #20a8e4 !important;
+}
+.celcomBlueFont{
+color: #20a8e4 !important;
+}
+.celcomBlueBorder{
+border-color: #20a8e4 !important;
+}
+
+.darkBlueBg{
+  background: #164394 !important;
+}
+
+.side-heading{
+  font-weight: bold;
+  font-size: 20px;
+}
+.cdk-overlay-pane.my-dialog {
+  position: relative!important;
+}
+.close.mat-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+::ng-deep.mat-dialog-container {
+  overflow-y: hidden !important;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-celcom-white-alternate {
+  background-color: white;
+  color: #009BDF;
+  border: 1px solid #009BDF;
+
+  &:hover {
+    background-color: rgba(0, 155, 223, 1);
+    color: white;
+  }
+}
+
+.mat-flat-button.mat-celcom-dark-blue {
+  background-color: #164394;
+  color: white;
+  height: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button-styling {
+  margin-left: 1rem;
+}

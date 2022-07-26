@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bizpartner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bizpartner
+  template:
+    metadata:
+      labels:
+        app: bizpartner
+    spec:
+      containers:
+      - name: bizpartner
+        image: azacrwolverine.azurecr.io/jenkins_bizpartner/bizpartner:v1
+        imagePullPolicy: IfNotPresent
+
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bizpartner
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  labels:
+    app: bizpartner
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 
+  selector:
+    app: bizpartner
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP

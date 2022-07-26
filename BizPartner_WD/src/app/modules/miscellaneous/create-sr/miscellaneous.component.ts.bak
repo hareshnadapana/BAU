@@ -1,0 +1,81 @@
+import { Component, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { CugDocumentPopupComponent } from 'app/modules/miscellaneous/cug-document-popup/cug-document-popup.component';
+import { MatTable } from '@angular/material/table';
+
+@Component({
+  selector: 'app-miscellaneous',
+  templateUrl: './miscellaneous.component.html',
+  styleUrls: ['./miscellaneous.component.scss']
+})
+export class MiscellaneousComponent {
+
+  @ViewChild(MatTable) table: MatTable<any>;
+ 
+  miscUploadedFileTableColumn: any[] = ['name', 'size', 'type'];
+  miscUploadedFileData: any[] = [];
+
+  requiredCheck0 = new FormControl('', [Validators.required]);
+  requiredCheck1 = new FormControl('', [Validators.required]);
+  createSrForm: FormGroup = this.builder.group({
+    selectType: [, { validators: [Validators.required], updateOn: "change"}],
+    srArea: [, { validators: [Validators.required], updateOn: "change"}],
+    memoId: [, { validators: [Validators.required], updateOn: "change"}],
+    desc: [, { validators: [Validators.required], updateOn: "change"}]
+  })
+
+  selectTypeChoice: any[] = [
+    { label: 'Type 1', value: 'type1' },
+    { label: 'Type 2', value: 'type2' },
+    { label: 'Type 3', value: 'type3' }
+  ]
+
+  srAreaChoice: any[] = [
+    { label: 'Area 1', value: 'area1' },
+    { label: 'Area 2', value: 'area2' },
+    { label: 'Area 3', value: 'area3' },
+  ]
+
+  memoIdChoice: any[] = [
+    { label: 'Memo 1', value: 'memo1' },
+    { label: 'Memo 2', value: 'memo2' },
+    { label: 'Memo 3', value: 'memo3' }
+  ]
+
+  constructor(private builder: FormBuilder, private router:Router, public dialog: MatDialog) {}
+
+  home() {
+    this.router.navigate(['/dashboard/dealer']);
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CugDocumentPopupComponent,{
+      height: '90%',
+      width: '80%'
+  });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result?.data) {
+        const uploadData = result?.data[0];
+        this.miscUploadedFileData.push({ ...uploadData });
+        this.table.renderRows();
+      }
+    });
+  }
+
+  goToNext() {
+    this.router.navigate(['/cug/cugsummary']);
+  }
+
+  cancel() {
+    this.router.navigate(['/dashboard/dealer']);
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="overflow-hidden">
+  <body>
+    <div>
+      <!-- header -->
+      <div class="bg-default dark:bg-transparent" style="padding: 10px 0 10px 0; margin-left: 16px; margin-right: 16px;">
+        <!-- <div>
+          <button mat-button (click)="navigateHome()" color="primary" id="back" class="-ml-5">
+            <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+            <span class="ml-2 text-primary-500 dark:text-primary-400">Back</span>
+          </button>
+        </div> -->
+        <div class="header-container">
+          <div class="text-3xl md:text-4xl font-extrabold">
+            <button mat-icon-button (click)="navigateHome()" color="primary" id="back">
+              <mat-icon matPrefix svgIcon="heroicons_outline:celcom-backicon"></mat-icon>
+            </button>
+            Blacklist Check
+          </div>
+          <div *ngIf="showNotification" @fade class="rounded-2xl bg-card py-3 px-4 notification-popup" [style]="errorStatus ? 'background-color: #F44236 !important;' : 'background-color: #21C479 !important;'">
+            <div style="font-weight: 600; cursor: context-menu;">{{ blacklistNotificationData }}</div>
+            <mat-icon matPrefix class="icon-close" svgIcon="heroicons_outline:x" (click)="onCloseNotification()"></mat-icon>
+        </div>
+        </div>
+      </div>
+      <!-- form -->
+      <form [formGroup]="blacklistCheckForm" (submit)="onValidate()">
+        <div class="form-container rounded-2xl shadow overflow-y-auto bg-card" cdkScrollable>
+          <div class="form-display">
+            <div class="form-field-display">
+              <mat-form-field  floatLabel="always" style="width: 100%" hideRequiredMarker>
+                <mat-label class="required-marker">Customer ID</mat-label>
+                <mat-select formControlName="customerId" placeholder="Customer ID" required>
+                  <mat-option *ngFor="let item of customerIdTypeChoice" [value]="item.value">{{ item.label }}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="blacklistCheckForm.get('customerId').hasError('required')">{{ getIdTypeErrorMessage() }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-field-display">
+              <mat-form-field  floatLabel="always" style="width: 100%" hideRequiredMarker>
+                <mat-label class="required-marker">ID Number</mat-label>
+                <input matInput type="text" placeholder="ID Number" class="form-control input-content" formControlName="idNumber" required>
+                <mat-error *ngIf="blacklistCheckForm.get('idNumber').hasError('required') || blacklistCheckForm.get('idNumber').hasError('pattern')">{{ getIdNumberErrorMessage() }}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="button-container-section" style="display: flex; justify-content: end;">
+          <!-- <button mat-flat-button color="celcom-alternate-white" type="button" (click)="navigateHome()" style="margin-right: 20px;">
+            Cancel
+          </button> -->
+          <button mat-flat-button color="celcom-blue" type="submit" [disabled]="!blacklistCheckForm.valid">
+            Check
+          </button>
+        </div>
+      </form>
+      <div *ngIf="showInternalBlacklistTable" class="table-styling" id="internal_blacklist_table">
+        <table mat-table [dataSource]="internalDataSource" class="docs-table products-table" matSort fusePerfectScrollbar>
+
+          <ng-container matColumnDef="billingAccNo">
+            <th mat-header-cell *matHeaderCellDef>Billing Account No</th>
+            <td mat-cell *matCellDef="let element">{{ element.billingAccNo }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="blacklistDate">
+            <th mat-header-cell *matHeaderCellDef>Blacklist Date</th>
+            <td mat-cell *matCellDef="let element">{{ element.blacklistDate }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="customerId">
+            <th mat-header-cell *matHeaderCellDef>Customer ID</th>
+            <td mat-cell *matCellDef="let element">{{ element.customerId }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="customerName">
+            <th mat-header-cell *matHeaderCellDef>Customer Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.customerName }}</td>
+          </ng-container>
+
+          <ng-container *ngIf="internalIdTypeColumn === 'newIcNumber'" matColumnDef="newIcNumber">
+            <th mat-header-cell *matHeaderCellDef>New IC Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.newIcNumber }}</td>
+          </ng-container>
+
+          <ng-container *ngIf="internalIdTypeColumn === 'nonIcNumber'" matColumnDef="nonIcNumber">
+            <th mat-header-cell *matHeaderCellDef>Non IC Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.nonIcNumber }}</td>
+          </ng-container>
+
+          <ng-container *ngIf="internalIdTypeColumn === 'oldIcNumber'" matColumnDef="oldIcNumber">
+            <th mat-header-cell *matHeaderCellDef>Old IC Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.oldIcNumber }}</td>
+          </ng-container>
+
+          <ng-container *ngIf="internalIdTypeColumn === 'military'" matColumnDef="military">
+            <th mat-header-cell *matHeaderCellDef>Military IC Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.nonIcNumber }}</td>
+          </ng-container>
+
+          <ng-container *ngIf="internalIdTypeColumn === 'police'" matColumnDef="police">
+            <th mat-header-cell *matHeaderCellDef>Police IC Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.nonIcNumber }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="msisdn">
+            <th mat-header-cell *matHeaderCellDef>MSISDN</th>
+            <td mat-cell *matCellDef="let element">{{ element.msisdn }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="internalBlacklistTableColumn;"></tr>
+          <tr mat-row *matRowDef="let row; columns: internalBlacklistTableColumn;"></tr>
+        </table>
+      </div>
+      <div *ngIf="showExternalBlacklistTable" class="table-styling" id="external_blacklist_table">
+        <table mat-table [dataSource]="externalDataSource" class="docs-table products-table" matSort fusePerfectScrollbar>
+
+          <ng-container matColumnDef="individualName">
+            <th mat-header-cell *matHeaderCellDef>Individual Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.individualName }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="blacklistedAccountNumber">
+            <th mat-header-cell *matHeaderCellDef>Blacklisted Account Number</th>
+            <td mat-cell *matCellDef="let element">{{ element.blacklistedAccountNumber }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="blacklistedByCompany">
+            <th mat-header-cell *matHeaderCellDef>Blacklisted By Company</th>
+            <td mat-cell *matCellDef="let element">{{ element.blacklistedByCompany }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="blacklistedDate">
+            <th mat-header-cell *matHeaderCellDef>Blacklist Date</th>
+            <td mat-cell *matCellDef="let element">{{ element.blacklistedDate }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="externalBlacklistTableColumn;"></tr>
+          <tr mat-row *matRowDef="let row; columns: externalBlacklistTableColumn;"></tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

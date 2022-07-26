@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div class="m-8">
+    <div class="title-container">
+      <div class="title"><span style="color: grey">Welcome, </span><span style="color: #009BDF; font-weight: 600;">{{
+          userFullName }}</span></div>
+      <!-- <div class="textbox-custom input-box">
+        <input class="form-control input-content" placeholder="Search Customer">
+        <mat-icon matPrefix svgIcon="heroicons_outline:search" style="color: #009BDF"></mat-icon>
+      </div> -->
+    </div>
+  <div class="nav_flow_dealerdashboard">
+    <div class="nav_container">
+      <div class="nav_container_topsec">
+        <div class="new_reg_sec" (click)="navigateTo('NewRegistration','')">
+          <div class="new_reg_header">
+            <h3>New Registration</h3>
+            <img src="/assets/images/logo/icon_right_heading.svg"  class="right_blue_icon"/>
+          </div>
+          <div class="new_reg_content">
+            <img src="/assets/images/logo/icon_dashboard_registration.svg" class="new_reg_icon" />
+            <p>Enables purchase of a subscription
+              or a device bundle for new and
+              existing customers</p>
+          </div>
+        </div>
+        <div class="port_in_sec" (click)="navigateTo('MNPPortIn','')">
+          <div class="port_in_header">
+            <h3>Mobile Number Port-In</h3>
+            <img src="/assets/images/logo/icon_right_heading.svg" class="right_blue_icon" />
+          </div>
+          <div class="port_in_content">
+            <img src="/assets/images/logo/icon_port_dashboard.svg" class="port_in_icon" />
+            <p>Enables portability of a subscriber into Celcom</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav_container_btmsec" (click)="navigateTo('BlackList','/blacklistcheck')">
+        <div class="blacklist_check">
+          <div class="blacklist_check_header">
+            <h3>Blacklist Check</h3>
+            <img src="/assets/images/logo/icon_right_white.svg" class="right_white_icon" />
+          </div>
+          <div class="blacklist_check_content">
+            <img src="/assets/images/logo/icon_blacklist_check_white.svg" class="white_icon" />
+            <p class="">Performs eligibility check for a subscriber to be onboarded</p>
+          </div>
+        </div>
+        <div class="reserve_number" (click)="navigateTo('ReserveNumber','/check/reservenumber')">
+          <div class="reserve_number_header">
+            <h3>Reserve Number</h3>
+            <img src="/assets/images/logo/icon_right_white.svg" class="right_white_icon" />
+          </div>
+          <div class="reserve_number_content">
+            <img src="/assets/images/logo/icon_reserve_number_white.svg" class="white_icon" />
+            <p  class="">Enables reservation of MSISDN for your ID.</p>
+          </div>
+        </div>
+        <div class="order_history" (click)="navigateTo('OrderHistory','/order/history')">
+          <div class="order_history_header">
+            <h3>Order History</h3>
+            <img src="/assets/images/logo/icon_right_white.svg" class="right_white_icon" />
+          </div>
+          <div class="order_history_content">
+            <img src="/assets/images/logo/icon_history_white.svg" class="white_icon" />
+            <p  class="">Enables a detailed view of orders placed by you</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart" class="rounded-2xl shadow graph-style dealer-incentive-chart" (click)="navigateTo('Incentives', '/dashboard/incentives')">
+      <apx-chart
+        [series]="dealerIncentivechartOptions.series"
+        [chart]="dealerIncentivechartOptions.chart"
+        [xaxis]="dealerIncentivechartOptions.xaxis"
+        [yaxis]="dealerIncentivechartOptions.yaxis"
+        [stroke]="dealerIncentivechartOptions.stroke"
+        [labels]="dealerIncentivechartOptions.labels"
+        [legend]="dealerIncentivechartOptions.legend"
+        [title]="dealerIncentivechartOptions.title"
+        [tooltip]="dealerIncentivechartOptions.tooltip"
+        [grid]="dealerIncentivechartOptions.grid"
+        [dataLabels]="dealerIncentivechartOptions.dataLabels"
+        [markers]="dealerIncentivechartOptions.markers"
+        [fill]="dealerIncentivechartOptions.fill"
+        [noData]="dealerIncentivechartOptions.noData"
+      ></apx-chart>
+    </div>
+  </div>
+  <div class="search_container">
+    <div class="search_customer_content">
+      <h3>Customer Search</h3>
+      <div class="search_customer_details">
+        <img src="/assets/images/logo/icon_search_customer.svg" class="search_customer_icon" />
+        <p>Enables 360 degree view of customer information. Details subscriptions, accounts & contact details available against customer</p>
+      </div>
+    </div>
+
+    <div class="input_sec">
+      <div class="textbox-custom input_box" style="width: 100%;">
+        <mat-form-field  floatLabel="always" class="bg-card" style="width: 100%;" hideRequiredMarker>
+          <mat-select   placeholder="Search By" required>
+            <mat-option value="Customer ID">
+              Customer ID
+            </mat-option>
+            <mat-option value="MSISDN">
+             MSISDN
+            </mat-option>
+            <mat-option value="Passport">
+              Passport
+            </mat-option>
+          </mat-select>
+         </mat-form-field>
+      </div>
+       <div class="textbox-custom input_box" style="width: 100%;">
+        <mat-form-field  floatLabel="always" class="bg-card" style="width: 100%;" hideRequiredMarker>
+           <input matInput type="tel" id="property[3].key" class="form-control input-content"
+          placeholder="Search" formControlName="numberPattern"
+          required casetransform />
+          </mat-form-field>
+      </div>
+
+     
+      <button mat-raised-button (click)="navigateTo('SearchCustomer','')">Search</button>
+    </div>
+    
+  </div>
+  </div>
+</body>
+</html>

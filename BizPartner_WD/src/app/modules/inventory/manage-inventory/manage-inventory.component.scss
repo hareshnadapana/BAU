@@ -1,0 +1,694 @@
+.profile-white {
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.6em;
+  border-radius: 3px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  background-color: #ffffff !important;
+  color: #424242;
+}
+.testcolumnalign {
+  padding-left: 24px;
+  // text-align: center;
+}
+.column {
+  float: left;
+  width: 48%;
+  padding:20px;
+}
+.mat-form-field {
+  display: block;
+}  
+.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper {
+  margin-bottom: 0;
+}
+.columntwo {
+  float: left;
+  width: 48%;
+  padding:20px;
+  }
+::ng-deep {
+  //option that are displayed-view,edit,remove,assign
+  .p-menu-overlay {
+    position: fixed !important;
+    display: grid !important;
+    left: 882.55px !important;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 1em;
+    // margin-right: 1em;
+    margin-top: 10em;
+    border-radius: 3px;
+  }
+
+  .p-menu.p-menu-overlay.profile-white {
+    top: 0px;
+    left: 0px;
+  }
+  // .p-menu .p-submenu-header {
+  //   padding: 0;
+  //   line-height:350px;
+  //   height:35px;
+  // }
+  .p-button-icon {
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+::ng-deep {
+  .p-dialog .p-dialog-header .p-dialog-title {
+    margin-left: 15px !important;
+  }
+  .p-dialog .p-dialog-header {
+    padding: 4px !important;
+  }
+  // .p-dialog{
+  //   width: 100% !important;
+  // }
+}
+
+.fullpg-container {
+  min-height: 100px;
+}
+
+//icon boundary properties e.g when click 3 dot then shadow comes that will be decided by width/height
+.p-button-text {
+  min-width: 10px;
+  font-size: 35px;
+  background-size: 10px;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+}
+
+.products-table {
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .mat-header-row {
+    min-height: 64px;
+  }
+
+  .product {
+    position: relative;
+    cursor: pointer;
+    height: 70px;
+  }
+
+  .mat-column-name {
+    flex: 0 1 400px;
+  }
+
+  .mat-column-contacttype {
+    flex: 0 1 150px;
+
+    .product-image {
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .mat-column-mobile {
+    flex: 0 1 300px;
+  }
+
+  .mat-column-email {
+    flex: 0 1 400px;
+  }
+
+  .mat-column-quantity {
+    flex: 0 1 160px;
+  }
+
+  .mat-column-action {
+    flex: 0 1 80px;
+  }
+
+  .quantity-indicator {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+
+    & + span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .active-icon {
+    border-radius: 50%;
+  }
+}
+
+fuse-sidebar {
+  background: none !important;
+  box-shadow: none !important;
+}
+#cust_mat_icon{
+  font-size: 30px;float: left;
+}
+#uploadDocument{
+  float: right;margin-bottom: 10px;margin-top: 20px;
+}
+#uploadedBy_date{
+  font-size: 12px; font-weight: 300
+}
+#deleteAction_2{
+  font-size: 12px; font-weight: 300;cursor: pointer;
+}
+.mat-header-cell {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+.status-pending{
+  background-color:  #F2A22B !important;
+  color: #ffffff;  
+}
+.status-success{
+  background-color: #47CC78 !important;
+  color: #ffffff;  
+}
+.mat-column-tick{
+  width: 5%
+  // width:100px ;
+}
+// .mat-column-outletid{
+//   // width:100px ;
+//   width: 23%;
+// }
+// .mat-column-outletid,.mat-column-msisdn,.mat-column-tick,.mat-column-reservedate{
+//   padding-right: 20px;
+// }
+// .mat-column-msisdn{
+//   // width: 180px;
+//   width: 23%;
+// }
+// .mat-column-tick{
+//   // width: 250px;
+//   // width: 23%;
+// }
+// .mat-column-reservedate{
+//   // width: 200px;
+//   width: 23%;
+// }
+// .mat-column-releasedate{
+//   width: 23%;
+// }
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-delete {
+  background-color: #C40D42;
+  color: white;
+}
+
+.mat-flat-button.mat-cancel {
+  background-color: #999999;
+  color: white;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 35px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 2;
+  width: 2;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  height: 23px;
+  width: 23px;
+  border: 0.11rem solid #1FA8E3; 
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #1FA8E3;
+  border:1px solid #1FA8E3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  top: 23%;
+  left: 37%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  /////////////// for header ///////////////
+  /* Create a custom checkbox */
+  .checkmarkHead {
+    position: absolute;
+    top: 0;
+    transform: translate(0, -50%);
+    height: 23px;
+    width: 23px;
+    border: 0.11rem solid transparent; 
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmarkHead {
+    // background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmarkHead {
+    background-color: #1FA8E3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmarkHead:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmarkHead:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmarkHead:after {
+    top: 23%;
+    left: 37%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .heading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .bubble
+  {
+  position: absolute;
+  width: 525px;
+  // height: 300px;
+  padding: 0px;
+  background: #FFFFFF;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  z-index: 10;
+  }
+
+  .bubble:after
+  {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 12px 14px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 10;
+  top: -14px;
+  // left: 472px;
+  left: 491px;
+  }
+
+  .resize {
+    width: 120% !important
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+  .heads {
+    align-items:center; 
+    padding: 10px 0;
+    margin: 0 16px;
+    display: flex;
+  }
+  .headssec {
+    display:flex
+  }
+  .title {
+    align-items: center; 
+    display:flex;
+    justify-content: space-between;
+  }
+  .titleicon {
+    width: 176px; 
+    margin-left: 24px; 
+    white-space:pre
+  }
+  .clickdelete {
+    width: 9vw; 
+    margin-left: 24px; 
+    margin-right: 24px; 
+    white-space:pre
+  }
+  .clickcancel {
+    width: 9vw; 
+    margin-left: 24px; 
+    white-space:pre
+  }
+  .searchbox {
+    display:flex; 
+    border: 1px solid lightgrey; 
+    min-height: 40px; 
+    border-radius: 30px;
+    background:#fff;
+  }
+  .filterbox {
+    margin-left: 15px;
+    white-space:pre
+  }
+  .boxes {
+    display: flex;
+    align-items: center
+  }
+  .boxestwo {
+    display: flex;
+    align-items: center
+  }
+  .filterfield {
+    width: 92%; 
+    display: flex; 
+    place-content: center;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1049px) {
+    .columnalign {
+      text-align: center;
+      // padding-left: 2%;
+    }
+    .testcolumnalign {
+      padding-left: 24px;
+      text-align: center;
+    }
+    .clickcancel {
+      margin-left: 6px;
+    }
+    .clickdelete {
+      margin-left: 6px; 
+      margin-right: 6px;
+    }
+    .searchbox {
+      display:flex; 
+      border: 1px solid lightgrey; 
+      min-height: 40px; 
+      border-radius: 30px;
+      margin-bottom: 0px;
+      width: 30%;
+    }
+    .filterbox{
+      margin-left: 12px; 
+      white-space:pre
+    }
+    .titleicon {
+      width: 176px; 
+      margin-left: 12px; 
+      white-space:pre
+    }
+    .headcol {
+      width: 30%
+    }
+  }
+
+  @media screen and (min-width: 649px) and (max-width: 1000px) {
+    .columnalign {
+      text-align: center;
+      // padding-left: 2%;
+    }
+    .testcolumnalign {
+      padding-left: 24px;
+      text-align: center;
+    }
+    .clickcancel {
+      margin-left: 6px;
+    }
+    .clickdelete {
+      margin-left: 6px; 
+      margin-right: 6px;
+    }
+    .searchbox {
+      display:flex; 
+      border: 1px solid lightgrey; 
+      min-height: 40px; 
+      border-radius: 30px;
+      margin-bottom: 0px;
+      width: 30%;
+    }
+    .filterbox{
+      margin-left: 12px; 
+      white-space:pre
+    }
+    .titleicon {
+      width: 176px; 
+      margin-left: 12px; 
+      white-space:pre
+    }
+    .headcol {
+      width: 20%
+    }
+  }
+
+  @media screen and (min-width: 440px) and (max-width: 649px) {
+    .mobileblock {
+      overflow-x: auto;
+      display: flex;
+    }
+    .heads {
+      align-items:unset; 
+      padding: 18px 0px 10px 0px;
+      margin: 0 16px;
+      display: block;
+    }
+    .headssec {
+      display:block;
+    }
+    .title {
+      align-items: center; 
+      display:block;
+    }
+    .columnalign {
+      text-align: center;
+      // padding-left: 2%;
+    }
+    .testcolumnalign {
+      padding-left: 24px;
+      text-align: center;
+    }
+    .titleicon {
+      width: 100%; 
+      margin-left: 0; 
+      white-space:pre;
+      margin-bottom: 0;
+    }
+    .titleclick {
+      display: flex;
+      align-items:center;
+    }
+    .clickdelete {
+      width: 48%; 
+      margin-left: 12px; 
+      margin-right: 0; 
+      white-space:pre
+    }
+    .clickcancel {
+      width: 48%; 
+      margin-left: 0; 
+      white-space:pre;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .searchbox {
+      display:flex; 
+      border: 1px solid lightgrey; 
+      min-height: 40px; 
+      border-radius: 30px;
+      margin-bottom: 10px;
+    }
+    .filterbox {
+      margin-left: 24px; 
+      white-space:pre
+    }
+    .boxes {
+      display: flex;
+      align-items: center
+    }
+    .boxestwo {
+      display: flex;
+      align-items: center
+    }
+    .bubble {
+      width:70%;
+      // 300
+    }
+    .mat-header-cell {
+      padding: 0 5px;
+    }
+    .mat-cell {
+      padding: 0 5px;
+    }
+  }
+
+  @media screen and (min-width: 1px) and (max-width: 440px) {
+    .mobileblock {
+      overflow-x: auto;
+      display: flex;
+    }
+    .heads {
+      align-items:unset; 
+      padding: 18px 0px 10px 0px; 
+      margin: 0 16px;
+      display: block;
+    }
+    .headssec {
+      display:block;
+    }
+    .title {
+      align-items: center; 
+      display:block;
+    }
+    .columnalign {
+      text-align: center;
+      // padding-left: 2%;
+    }
+    .testcolumnalign {
+      padding-left: 24px;
+      text-align: center;
+    }
+    .titleicon {
+      width: 100%; 
+      margin-left: 0; 
+      white-space:pre;
+      margin-bottom: 0;
+    }
+    .titleclick {
+      display: flex;
+      align-items:center;
+    }
+    .clickdelete {
+      width: 47%; 
+      margin-left: 12px; 
+      margin-right: 0; 
+      white-space:pre
+    }
+    .clickcancel {
+      width: 47%; 
+      margin-left: 0; 
+      white-space:pre;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .searchbox {
+      display:flex; 
+      border: 1px solid lightgrey; 
+      min-height: 40px; 
+      border-radius: 30px;
+      margin-bottom: 10px;
+    }
+    .filterbox {
+      margin-left: 24px; 
+      white-space:pre
+    }
+    .boxes {
+      display: flex;
+      align-items: center
+    }
+    .boxestwo {
+      display: flex;
+      align-items: center;
+      place-content: flex-end;
+    }
+    .bubble {
+      width:70%;
+      // 300
+    }
+    .filterfield {
+      display: block;
+    }
+    .column {
+      float: left;
+      width: 92%;
+      padding: 20px 20px 0px 20px
+    }
+    .columntwo {
+      float: left;
+      width: 92%;
+      padding: 0px 20px 20px 20px;
+      margin-left: 0rem !important;
+    }
+    .mat-header-cell {
+      padding: 0 5px;
+    }
+    .mat-cell {
+      padding: 0 5px;
+    }
+  }

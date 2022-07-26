@@ -1,0 +1,122 @@
+.form-display {
+  display: flex;
+  width: 100%;
+}
+
+.required-marker:after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+}
+
+.form-field-display {
+  margin-right: 1.5rem;
+  width: 100%;
+}
+
+.form-container {
+  padding: 1.5rem 1.5rem .75rem 1.5rem;
+  margin: 0 16px;
+}
+
+.container-section {
+  margin: 0 2rem;
+}
+
+.button-container-section {
+  margin: 30px 16px;
+}
+
+.mat-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-styling {
+  box-shadow: 0 .125rem .3125rem rgba(0,0,0,.15);
+  margin: 0 16px 30px 16px;
+  display: block !important;
+  overflow-x: auto;
+}
+
+.mat-header-cell {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  color: white !important;
+  background-color: #164396;
+}
+
+.notification-popup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21C479 !important;
+  color: #FFFFFF;
+  width: 35%;
+}
+
+.icon-close {
+  color: white;
+  cursor: pointer;
+}
+
+.mat-form-field-required-marker {
+  color: red;
+}
+
+.mat-flat-button.mat-celcom-blue {
+  background-color: #009BDF;
+  padding: 14px 40px !important;
+  color: white;
+
+  &:hover {
+    background-color: #0080b9;
+  }
+}
+
+.mat-flat-button.mat-celcom-alternate-white {
+  background-color: white;
+  padding: 14px 40px !important;
+  color: #009BDF;
+  border: 1px solid #009BDF;
+
+  &:hover {
+    background-color: rgba(0, 155, 223, 1);
+    color: white;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-container {
+    display: block;
+    width: 100%;
+  }
+
+  .mat-header-cell {
+    padding: 0 10px;
+  }
+
+  .mat-cell {
+    padding: 0 10px;
+  }
+
+  .notification-popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    width: 100%;
+  }
+
+  .form-display {
+    display: block;
+    width: 100%;
+  }
+}
